@@ -922,27 +922,22 @@ footer {
 }
 
 /* cards servicios */
-.effect-section {
-    position: sticky;
-    top: 20px
-}
-
 .subtitle-servicios {
     color: var(--color-title);
     font-size: 2rem;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     position: relative
 }
 
 .servicios__paragraph {
     line-height: 1.7;
-    margin-bottom: 15px;
+    margin-bottom: 3em;
 }
 
 .cards {
-    width: 350px;
     padding: 40px 30px;
     border-radius: 20px;
+    margin-bottom: 2em;
     position: relative;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(108, 118, 134, 0.1);
@@ -1024,7 +1019,6 @@ footer {
 .info-uno-servicios__img {
     width: 100%;
     display: block;
-    margin-left: 4em;
     animation: move_vector 6s ease-in-out infinite;
 }
 
@@ -1229,7 +1223,7 @@ footer {
 }
 
 .hero-faqs__title {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .hero-faqs__paragraph {

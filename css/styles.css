@@ -97,9 +97,9 @@ body {
     /* DUDA */
     color: #fff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/computer.jpg);
+    background: -webkit-linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6)), url(../img/computer.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/computer.jpg);
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6)), url(../img/computer.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -906,6 +906,27 @@ footer {
 }
 
 /* Title */
+.container-servicio-title {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 30rem;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.cover-top{
+    background-image: url(./../img/cover_silver_flip.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.cover-bottom{
+    background-image: url(./../img/cover_silver_flip_dark.jpg);
+    background-size: cover;
+    background-position: right top;
+}
+
 .title-servicios {
     gap: 1em;
     display: flex;
@@ -1449,3 +1470,79 @@ footer {
         text-align: justify;
     }
 }
+
+
+/************************************************************************************************/
+/************************************************************************************************/
+/************************************* CONTACTENOS **********************************************/
+/************************************************************************************************/
+/************************************************************************************************/
+
+ .container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20%;
+    margin-top: 90px;
+ }
+
+ .container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+ }
+
+ .container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+ }
+
+ .container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+ }
+
+ .container-form a i{
+    color: orange;
+    margin-right: 10px;
+ }
+
+ .container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+ }
+
+ .container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+ }
+
+ .container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border:none;
+    outline: 0px;
+    background: orange;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+ }
+
+ .container-form .btn-enviar:hover{
+    background: #e39403;
+ }

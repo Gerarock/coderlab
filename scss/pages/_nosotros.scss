@@ -1,0 +1,279 @@
+/* NESTING SASS */
+
+/* seccion hero nosotros */
+.hero-nosotros {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-2.jpeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-2.jpeg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 150%;
+    background-attachment: fixed;
+    animation: movimiento 20s infinite linear alternate;
+
+    @keyframes movimiento {
+        from {
+            background-position: bottom left;
+        }
+
+        to {
+            background-position: top right;
+        }
+    }
+
+    .hero-nosotros__container {
+        @include flex(column, nowrap, center, center, 1em);
+        grid-auto-rows: max-content;
+        align-content: center;
+        padding-bottom: 100px;
+        padding-top: 25em;
+        display: flex;
+
+        .hero-nosotros__title {
+            font-size: 3rem;
+        }
+
+        .hero-nosotros__paragraph {
+            margin-bottom: 20px;
+        }
+
+        .btn-hero {
+            display: inline-block;
+            background-color: #eb5757;
+            justify-self: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 32px;
+            box-shadow: 1px 1px 30px -5px #20202049;
+            transition: box-shadow 500ms;
+            font-size: 18px;
+            font-weight: 600;
+
+            &:hover {
+                box-shadow: 1px 1px 30px -5px #20202085;
+            }
+        }
+    }
+}
+
+/* seccion main */
+.main {
+    background: #f8f9fc;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    padding-top: 8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .main__title {
+        font-size: 3rem;
+    }
+
+    .main__paragraph {
+        margin-bottom: 20px;
+    }
+}
+
+/* seccion nosotros */
+.nosotros {
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+
+    .nosotros__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+
+        .subtitle-nosotros {
+            color: $color-title;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 8px;
+                background-color: #eb5757;
+                position: absolute;
+                top: -30px;
+            }
+        }
+
+        .nosotros__paragraph {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .nosotros__picture {
+            max-width: 400px;
+            margin-left: 9em;
+
+            .nosotros__img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+/* seccion imagen nosotros */
+.image-nosotros {
+    text-align: center;
+    padding-top: 550px;
+    clip-path: polygon(0 12%, 100% 0, 100% 83%, 0% 100%);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-1.jpeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-1.jpeg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+/* seccion caracteristicas */
+.caracteristicas {
+    text-align: center;
+    background: white;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-size: cover;
+
+    .subtitle {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .caracteristicas__paragraph {
+        line-height: 1.7;
+    }
+
+    .caracteristicas__main {
+        padding-top: 80px;
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        gap: 1em;
+        overflow: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+
+        .caracteristicas__icons {
+            display: grid;
+            gap: 1em;
+            justify-items: center;
+            width: 260px;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .caracteristicas__icon {
+                width: 40px;
+            }
+        }
+    }
+}
+
+/* seccion info uno */
+.info-uno {
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+
+    .info-uno__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+
+        .info-uno__picture {
+            max-width: 500px;
+
+            .info-uno__img {
+                width: 100%;
+                display: block;
+                border-radius: 20px;
+            }
+        }
+
+        .info-uno-nosotros {
+            color: $color-title;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 8px;
+                background-color: #eb5757;
+                position: absolute;
+                top: -30px;
+            }
+        }
+
+        .info-uno__paragraph {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/* seccion portada tres */
+.portada-tres {
+    text-align: center;
+
+    .subtitle-portada-tres {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .portada-tres__text {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .btn-portada-tres {
+        display: inline-block;
+        background-color: #eb5757;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 30px;
+        border-radius: 32px;
+        box-shadow: 1px 1px 30px -5px #20202049;
+        transition: box-shadow 500ms;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: 1px 1px 30px -5px #20202085;
+        }
+    }
+}

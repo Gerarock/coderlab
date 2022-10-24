@@ -1,0 +1,134 @@
+/* NESTING SASS */
+
+/* seccion portada uno */
+.portada-uno__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+
+    .portada-uno__picture {
+        max-width: 500px;
+
+        .portada-uno__img {
+            width: 100%;
+            display: block;
+            animation: move_vector 6s ease-in-out infinite;
+
+            @keyframes move_vector {
+                0% {
+                    transform: translateY(10px);
+                }
+
+                25% {
+                    transform: translateY(-10px);
+                }
+
+                100% {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+
+    .subtitle-portada-uno {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 50px;
+            height: 8px;
+            background-color: #eb5757;
+            position: absolute;
+            top: -30px;
+        }
+    }
+
+    .portada-uno__paragraph {
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+}
+
+/* seccion portada dos */
+.portada-dos {
+    text-align: center;
+    background: #f8f9fc;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-size: cover;
+    clip-path: polygon(0 12%, 100% 0, 100% 83%, 0% 100%);
+
+    .subtitle-portada-dos {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .portada-dos__paragraph {
+        line-height: 1.7;
+    }
+
+    .portada-dos__main {
+        padding-top: 80px;
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        gap: 1em;
+        overflow: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+
+        .portada-dos__icons {
+            display: grid;
+            gap: 1em;
+            justify-items: center;
+            width: 260px;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .portada-dos__icon {
+                width: 40px;
+            }
+        }
+    }
+}
+
+/* seccion portada tres */
+.portada-tres {
+    text-align: center;
+
+    .subtitle-portada-tres {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .portada-tres__text {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .btn-portada-tres {
+        display: inline-block;
+        background-color: #eb5757;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 30px;
+        border-radius: 32px;
+        box-shadow: 1px 1px 30px -5px #20202049;
+        transition: box-shadow 500ms;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: 1px 1px 30px -5px #20202085;
+        }
+    }
+}

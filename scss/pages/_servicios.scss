@@ -1,0 +1,357 @@
+/* NESTING SASS */
+
+/* seccion hero servicios */
+.hero-servicios {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    animation: color 9s ease-in-out infinite;
+    background-size: 300% 300%;
+    color: #fff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* seccion titutlo */
+.cover-top {
+    background-image: url(../img/cover_silver_flip.jpg);
+    background-size: cover;
+    background-position: center bottom;
+
+    .container-servicio-title {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 30rem;
+        overflow: hidden;
+        padding: 100px 0;
+
+        .title-servicios {
+            gap: 1em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .title-servicios__title {
+                font-size: 3rem;
+            }
+
+            .title-servicios__paragraph {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* seccion titulo cards */
+.subtitle-servicios {
+    color: $color-title;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.servicios__paragraph {
+    line-height: 1.7;
+    margin-bottom: 3em;
+}
+
+/* seccion cards */
+.cards {
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-bottom: 2em;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(108, 118, 134, 0.1);
+    z-index: 1;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        background: linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    & .icon {
+        color: ff2c9c;
+        font-size: 45px;
+        transition: all 0.5s;
+    }
+
+    & h3 {
+        margin: 15px 0;
+        color: #000;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+        transition: all 0.5s;
+    }
+
+    & p {
+        margin-bottom: 25px;
+        transition: all 0.5s;
+    }
+
+    &:hover .icon,
+    &:hover h3,
+    &:hover p,
+    &:hover {
+        color: #fff;
+    }
+
+    & .back-text {
+        margin: 0 auto;
+        color: #010101;
+        font-size: 200px;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0.04;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+
+    &:hover .back-text {
+        opacity: 0.1;
+    }
+}
+
+/* seccion info uno servicios */
+.cover-bottom {
+    background-image: url(../img/cover_silver_flip_dark.jpg);
+    background-size: cover;
+    background-position: right top;
+
+    .info-uno-picture {
+        max-width: 400px;
+
+        .info-uno-img {
+            width: 100%;
+            display: block;
+            animation: move_vector 6s ease-in-out infinite;
+        }
+    }
+
+    .subtitle-info-uno {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 50px;
+            height: 8px;
+            background-color: #eb5757;
+            position: absolute;
+            top: -30px;
+        }
+    }
+
+    .text-info-uno {
+        line-height: 1.7;
+    }
+}
+
+/* seccion cards tecnologias */
+.card-tecnologias {
+    gap: 1em;
+    padding-top: 7em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .card-tecnologias__title {
+        font-size: 3rem;
+    }
+
+    .card-tecnologias__paragraph {
+        margin-bottom: 60px;
+    }
+
+    .box {
+        position: relative;
+        width: calc(400px - 30px);
+        height: calc(300px - 30px);
+        background: #000;
+        float: left;
+        margin: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 10px;
+
+        & .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: 0.5s;
+            z-index: 1;
+
+            & .fa {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 80px;
+                transition: 0.5s;
+                color: #fff;
+            }
+        }
+
+        &:hover .icon .fa {
+            font-size: 40px;
+        }
+
+        &:hover .icon {
+            top: 20px;
+            left: calc(50% - 40px);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        & .content {
+            position: absolute;
+            top: 100%;
+            height: calc(100% - 100px);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            opacity: 0;
+
+            & h3 {
+                margin: 0 0 10px;
+                padding: 0;
+                color: #fff;
+                font-size: 24px;
+            }
+
+            & p {
+                margin: 0;
+                padding: 0;
+                color: #fff;
+            }
+        }
+
+        &:hover .content {
+            top: 100px;
+            opacity: 1;
+        }
+
+        &:nth-child(1) .icon {
+            background: #d70230;
+        }
+
+        &:nth-child(1) {
+            background: #f40135;
+        }
+
+        &:nth-child(2) .icon {
+            background: #d70230;
+        }
+
+        &:nth-child(2) {
+            background: #83df1a;
+        }
+
+        &:nth-child(3) .icon {
+            background: #d70230;
+        }
+
+        &:nth-child(3) {
+            background: #f4d909;
+        }
+
+        &:nth-child(4) .icon {
+            background: #d70230;
+        }
+
+        &:nth-child(4) {
+            background: #328fa5;
+        }
+
+        &:nth-child(5) .icon {
+            background: #d70230;
+        }
+
+        &:nth-child(5) {
+            background: #328fa5;
+        }
+
+        &:nth-child(6) .icon {
+            background: #23798e;
+        }
+
+        &:nth-child(6) {
+            background: #328fa5;
+        }
+    }
+}
+
+/* seccion info dos servicios */
+.info-dos {
+    text-align: center;
+
+    .subtitle-info-dos {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .text-info-dos {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .btn-info-dos {
+        display: inline-block;
+        background-color: #eb5757;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 30px;
+        border-radius: 32px;
+        box-shadow: 1px 1px 30px -5px #20202049;
+        transition: box-shadow 500ms;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: 1px 1px 30px -5px #20202085;
+        }
+    }
+}

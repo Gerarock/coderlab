@@ -1,0 +1,250 @@
+/* nav */
+nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+    transition: 0.5s;
+    z-index: 1000;
+
+    & .logo {
+        position: relative;
+        font-size: 1.9em;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+
+    & ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & ul li {
+        position: relative;
+        list-style-type: none;
+    }
+
+    & ul li a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 0 20px;
+        letter-spacing: 0.5px;
+    }
+
+    .link:after {
+        content: '';
+        position: absolute;
+        background-color: #eb5757;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -12px;
+        transition: 0.3s;
+    }
+
+    .link:hover:after {
+        width: 100%;
+    }
+
+    .link:hover {
+        color: #eb5757;
+        transition: 0.5s;
+    }
+
+    .select {
+        color: #eb5757;
+        border-bottom: solid 3px #eb5757;
+        padding-bottom: 9px;
+
+        &::after {
+            color: #eb5757;
+            background-color: transparent;
+        }
+    }
+
+    /* menu sticky - .sticky en js */
+    &.sticky .select {
+        color: #eb5757;
+    }
+
+    &.sticky {
+        padding: 15px 100px;
+        background-color: rgb(255 255 255 / 97%);
+        box-shadow: 1px 5px 10px 0px #00000010;
+    }
+
+    &.sticky ul li a {
+        color: black;
+    }
+
+    &.sticky .contactenos {
+        color: white;
+    }
+
+    &.sticky .contactenos:hover {
+        color: black;
+    }
+
+    &.sticky .logo {
+        color: black;
+    }
+
+    &.sticky .contactenos {
+        background-color: white;
+        border: solid 2px #eb5757;
+        color: #eb5757;
+        padding: 12px 25px;
+        border-radius: 32px;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 6px;
+        margin-left: 3em;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #eb5757;
+            color: white;
+            border: solid 2px #eb5757;
+            transition: 0.5s;
+        }
+    }
+
+    /* boton contactenos sin sticky */
+    .contactenos {
+        background-color: #eb5757;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 32px;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 6px;
+        margin-left: 3em;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #fff;
+            color: black;
+        }
+    }
+}
+
+/* menu hamburguesa */
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 40px;
+    background: #eb5757;
+    border-radius: 8px;
+}
+
+.nav__close {
+    display: var(--show, none);
+}
+
+/* mod para sticky seccion servicios y faqs */
+.sticky-servicios {
+    padding-bottom: 4px !important;
+}
+
+.sticky-faqs {
+    padding-bottom: 4px !important;
+}
+
+/* media querys */
+@media (max-width:1200px) {
+    .main-logo {
+        margin-left: -1em;
+    }
+
+    .nav__menu {
+        display: block;
+        margin-right: 1em;
+    }
+
+    .nav__link--menu {
+        position: fixed;
+        background-color: rgb(49, 48, 48);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .nav__link--show {
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav__close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    nav.sticky .contactenos {
+        background-color: #eb5757;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 32px;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 6px;
+        margin-left: 3em;
+        transition: 0.5s;
+    }
+
+    nav.sticky ul li a {
+        color: #fff;
+    }
+}
+
+@media (max-width:600px) {
+    .main-logo {
+        margin-left: -4em;
+    }
+
+    .nav__menu {
+        display: block;
+        margin-right: -4em;
+    }
+
+    nav .logo {
+        font-size: 1.2em;
+    }
+}

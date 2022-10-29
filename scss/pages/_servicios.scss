@@ -1,24 +1,74 @@
 /* NESTING SASS */
 
 /* seccion hero servicios */
-.hero-servicios {
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 1000px;
-    position: relative;
-    display: grid;
-    grid-template-rows: 100px 1fr;
-    animation: color 9s ease-in-out infinite;
-    background-size: 300% 300%;
-    color: #fff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
+.fade-in {
+    animation: fadeIn 3s;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .hero-servicios {
+        width: 100%;
+        height: 100vh;
+        min-height: 600px;
+        max-height: 1000px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        animation: color 9s ease-in-out infinite;
+        background-size: 300% 300%;
+        color: #fff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/img8.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+
+        .text-logo {
+            color: #eb5757;
+        }
+
+        .hero__container {
+            @include flex(column, nowrap, center, center, 1em);
+            padding-bottom: 100px;
+            padding-top: 25em;
+
+            .hero__title {
+                font-size: 3rem;
+            }
+
+            .hero__paragraph {
+                margin-bottom: 20px;
+            }
+
+            .btn-hero {
+                display: inline-block;
+                background-color: #eb5757;
+                justify-self: center;
+                color: #fff;
+                text-decoration: none;
+                padding: 13px 30px;
+                border-radius: 32px;
+                box-shadow: 1px 1px 30px -5px #20202049;
+                transition: box-shadow 500ms;
+                font-size: 18px;
+                font-weight: 600;
+
+                &:hover {
+                    box-shadow: 1px 1px 30px -5px #20202085;
+                }
+            }
+        }
+    }
 }
 
 /* seccion titutlo */
@@ -182,12 +232,8 @@
 
 /* seccion cards tecnologias */
 .card-tecnologias {
-    gap: 1em;
+    @include flex(column, nowrap, center, center, 1em);
     padding-top: 7em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
 
     .card-tecnologias__title {
         font-size: 3rem;
@@ -353,5 +399,24 @@
         &:hover {
             box-shadow: 1px 1px 30px -5px #20202085;
         }
+    }
+}
+
+/* media queries */
+@media (max-width:1200px) {
+
+    /* hero */
+    .hero__title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__paragraph {
+        font-size: 1rem;
     }
 }

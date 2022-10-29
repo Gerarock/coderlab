@@ -1,5 +1,7 @@
-/* Comportamientos por defecto: justify-content: start; align-items: stretch;
+/* Comportamientos por defecto: 
+justify-content: start; align-items: stretch;
 flex-wrap: nowrap; flex-direction: row; gap: 0; */
+
 @mixin flex ($dir, $wrap, $jc, $ai, $gap) {
     display: flex;
     flex-direction: $dir;

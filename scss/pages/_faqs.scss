@@ -1,45 +1,55 @@
 /* NESTING SASS */
 
 /* seccion hero preguntas frecuentes */
-.hero-faqs {
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 1000px;
-    position: relative;
-    display: grid;
-    grid-template-rows: 100px 1fr;
-    /* background: linear-gradient(45deg, #eb5757, #7462ff, #f48e21, #23d5ab); */
-    /* animation: color 9s ease-in-out infinite; */
-    /* background-size: 300% 300%; */
-    color: #fff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-}
+.fade-in {
+    animation: fadeIn 3s;
 
-/* seccion hero container preguntas frecuentes */
-.hero-faqs__container {
-    grid-auto-rows: max-content;
-    align-content: center;
-    gap: 1em;
-    padding-bottom: 100px;
-    padding-top: 25em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
 
-    .hero-faqs__title {
-        font-size: 2rem;
+        to {
+            opacity: 1;
+        }
     }
 
-    .hero-faqs__paragraph {
-        margin-bottom: 20px;
+    .hero-faqs {
+        width: 100%;
+        height: 100vh;
+        min-height: 600px;
+        max-height: 1000px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        /* background: linear-gradient(45deg, #eb5757, #7462ff, #f48e21, #23d5ab); */
+        /* animation: color 9s ease-in-out infinite; */
+        /* background-size: 300% 300%; */
+        color: #fff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+
+        .text-logo {
+            color: #eb5757;
+        }
+
+        .hero-faqs__container {
+            @include flex(column, nowrap, center, center, 1em);
+            padding-top: 25em;
+
+            .hero-faqs__title {
+                font-size: 2rem;
+            }
+
+            .hero-faqs__paragraph {
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 
@@ -110,12 +120,10 @@
             }
 
             .pregunta {
+                @include flex(column, nowrap, space-between, center, 0);
                 font-weight: 700;
                 font-size: 18px;
                 line-height: 15px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
 
                 & img {
                     width: 14px;
@@ -191,6 +199,11 @@
 
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
     .categorias {
         grid-template-columns: 1fr 1fr;
         margin-left: 1em;
@@ -198,10 +211,8 @@
     }
 
     .categoria {
+        @include flex(row, nowrap, center, center, 0);
         padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 5px;
     }
 
@@ -231,10 +242,8 @@
     }
 
     .categoria {
+        @include flex(row, nowrap, center, center, 0);
         padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 5px;
     }
 
@@ -257,6 +266,15 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__paragraph {
+        font-size: 1rem;
+    }
+
     .categorias {
         grid-template-columns: 1fr;
         margin-left: 1em;

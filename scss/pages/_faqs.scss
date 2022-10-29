@@ -1,0 +1,294 @@
+/* NESTING SASS */
+
+/* seccion hero preguntas frecuentes */
+.fade-in {
+    animation: fadeIn 3s;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .hero-faqs {
+        width: 100%;
+        height: 100vh;
+        min-height: 600px;
+        max-height: 1000px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        /* background: linear-gradient(45deg, #eb5757, #7462ff, #f48e21, #23d5ab); */
+        /* animation: color 9s ease-in-out infinite; */
+        /* background-size: 300% 300%; */
+        color: #fff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(243, 62%, 33%, 0.459), hsla(0, 90%, 12%, 0.664)), url(../img/nosotros-hero.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+
+        .text-logo {
+            color: #eb5757;
+        }
+
+        .hero-faqs__container {
+            @include flex(column, nowrap, center, center, 1em);
+            padding-top: 25em;
+
+            .hero-faqs__title {
+                font-size: 2rem;
+            }
+
+            .hero-faqs__paragraph {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* seccion categorias */
+.titulo {
+    color: #3a3a3a;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0 70px 0;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 75px;
+    margin-right: 10em;
+    margin-left: 10em;
+
+    .categoria {
+        cursor: pointer;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        font-weight: 600;
+        color: #eb5757;
+        border: 2px solid #eb5757;
+        transition: .4s ease all;
+
+        &:hover {
+            box-shadow: $sombra;
+            color: #fff;
+            background: #eb5757;
+        }
+
+        .paragraph-btn {
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 0;
+        }
+    }
+
+    .categoria.activa {
+        color: #fff;
+        background: #eb5757;
+        box-shadow: 1px 1px 30px -5px #20202085;
+    }
+}
+
+
+/* seccion preguntas */
+.preguntas {
+    margin-left: 12em;
+    margin-right: 12em;
+
+    .contenedor-preguntas {
+        display: none;
+        grid-template-columns: 1fr;
+
+        .contenedor-pregunta {
+            transition: .4s ease all;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: #eb5757;
+            }
+
+            .pregunta {
+                @include flex(column, nowrap, space-between, center, 0);
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 15px;
+
+                & img {
+                    width: 14px;
+                }
+            }
+
+            .paragraph {
+                margin-top: 0;
+            }
+
+            .respuesta {
+                color: #808080;
+                line-height: 30px;
+                max-height: 0;
+                opacity: 0;
+                transition: .3s ease all;
+            }
+
+            &.activa .respuesta {
+                opacity: 1;
+                margin-bottom: 40px;
+                margin-right: 3em;
+                margin-left: 1em;
+                text-align: justify;
+            }
+
+            &.activa img {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .contenedor-preguntas.activo {
+        display: grid;
+    }
+}
+
+/* seccion portada tres */
+.section-bottom {
+    text-align: center;
+
+    .subtitle-section-bottom {
+        color: $color-title;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        position: relative
+    }
+
+    .section-bottom__text {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .btn-section-bottom {
+        display: inline-block;
+        background-color: #eb5757;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 30px;
+        border-radius: 32px;
+        box-shadow: 1px 1px 30px -5px #20202049;
+        transition: box-shadow 500ms;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+            box-shadow: 1px 1px 30px -5px #20202085;
+        }
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .categoria {
+        @include flex(row, nowrap, center, center, 0);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .preguntas {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .categoria svg {
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .contenedor-pregunta.activa .respuesta {
+        margin-right: 0em;
+        margin-left: 0em;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .categoria {
+        @include flex(row, nowrap, center, center, 0);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .preguntas {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .categoria svg {
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .contenedor-pregunta.activa .respuesta {
+        margin-right: 0em;
+        margin-left: 0em;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__paragraph {
+        font-size: 1rem;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .preguntas {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .contenedor-pregunta.activa .respuesta {
+        margin-right: 0em;
+        margin-left: 0em;
+        text-align: justify;
+    }
+}

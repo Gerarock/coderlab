@@ -1,0 +1,22 @@
+{
+  "name": "rocketlabs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerarock/coderlab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gerarock/coderlab/issues"
+  },
+  "homepage": "https://github.com/Gerarock/coderlab#readme",
+  "devDependencies": {}
+}

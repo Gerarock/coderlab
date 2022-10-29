@@ -1,0 +1,75 @@
+/* VARIABLES */
+
+$color-title: #001A49;
+$gris-claro: #B8B8B8;
+$sombra: 0 0 13px 0 rgba(185, 185, 185, .25);
+
+/* Palette */
+$primary: #EB5757;
+$secondary: #EC6E4E;
+$accent: #494949;
+$grey: #F9FAFC;
+$light: #FFFFFF;
+
+/* Font Sizes */
+$text-xxl: 4.8em;
+$text-xl: 3.6em;
+$text-lg: 3.2em;
+$text-md: 2.2em;
+$text-sm: 1.6em;
+$text-xs: 1.2em;
+
+/* Spacings */
+$sp-xxl: 12rem;
+$sp-xl: 8rem;
+$sp-lg: 5rem;
+$sp-md: 3.2rem;
+$sp-sm: 1.6rem;
+$sp-xs: 0.8rem;
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.bg-gray {
+    background: #f8f9fc;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+
+/* BOOTSTRAP DESREBOOT */
+.p-30 {
+    padding: 30px 0px;
+}
+
+.p-100 {
+    padding: 100px 0 0 0 !important;
+}
+
+/* MAPS */
+$paddings: (
+    p-6: $sp-xxl,
+    p-5: $sp-xl,
+    p-4: $sp-lg,
+    p-3: $sp-md,
+    p-2: $sp-sm,
+    p-1: $sp-xs
+);
+
+@each $key, $value in $paddings {
+    .#{$key} {
+        padding: $value;
+    }
+
+    .#{$key}-x {
+        padding-left: $value;
+        padding-right: $value;
+    }
+}

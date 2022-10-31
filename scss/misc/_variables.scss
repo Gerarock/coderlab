@@ -27,6 +27,10 @@ $sp-md: 3.2rem;
 $sp-sm: 1.6rem;
 $sp-xs: 0.8rem;
 
+.pt-300 {
+    padding-top: 300px;
+}
+
 .pt-60 {
     padding-top: 60px;
 }
@@ -39,8 +43,16 @@ $sp-xs: 0.8rem;
     background: #f8f9fc;
 }
 
+.bg-gray-dos {
+    background: #f7f7f8;
+}
+
 .bg-white {
     background: #fff;
+}
+
+.bg-orange {
+    background: #d7efff;
 }
 
 
@@ -63,7 +75,8 @@ $paddings: (
     p-1: $sp-xs
 );
 
-@each $key, $value in $paddings {
+@each $key,
+$value in $paddings {
     .#{$key} {
         padding: $value;
     }

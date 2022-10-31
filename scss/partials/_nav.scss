@@ -6,11 +6,13 @@ nav {
     top: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 30px 100px;
     transition: 0.5s;
-    z-index: 2;
+    z-index: 1000;
 
     & .logo {
+        position: relative;
         font-size: 1.9em;
         text-decoration: none;
         letter-spacing: 2px;
@@ -21,16 +23,19 @@ nav {
     }
 
     & ul {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    & ul li {
+    & li {
+        position: relative;
         list-style-type: none;
     }
 
-    & ul li a {
+    & a {
+        position: relative;
         text-decoration: none;
         color: white;
         font-weight: bold;
@@ -40,6 +45,7 @@ nav {
 
     .link:after {
         content: '';
+        position: absolute;
         background-color: #eb5757;
         height: 3px;
         width: 0;
@@ -68,54 +74,6 @@ nav {
         }
     }
 
-    /* menu sticky - .sticky en js */
-    &.sticky .select {
-        color: #eb5757;
-    }
-
-    &.sticky {
-        padding: 15px 100px;
-        background-color: rgb(255 255 255 / 97%);
-        box-shadow: 1px 5px 10px 0px #00000010;
-    }
-
-    &.sticky ul li a {
-        color: black;
-    }
-
-    &.sticky .contactenos {
-        color: white;
-    }
-
-    &.sticky .contactenos:hover {
-        color: black;
-    }
-
-    &.sticky .logo {
-        color: black;
-    }
-
-    &.sticky .contactenos {
-        background-color: white;
-        border: solid 2px #eb5757;
-        color: #eb5757;
-        padding: 12px 25px;
-        border-radius: 32px;
-        font-size: 13px;
-        font-weight: 700;
-        border-radius: 6px;
-        margin-left: 3em;
-        transition: 0.5s;
-
-        &:hover {
-            background-color: #eb5757;
-            color: white;
-            border: solid 2px #eb5757;
-            transition: 0.5s;
-        }
-    }
-
-    /* boton contactenos sin sticky */
     .contactenos {
         background-color: #eb5757;
         color: white;
@@ -132,41 +90,66 @@ nav {
             color: black;
         }
     }
+
+    &.sticky {
+        padding: 15px 100px;
+        background-color: rgb(255 255 255 / 97%);
+        box-shadow: 1px 5px 10px 0px #00000010;
+
+        & .select {
+            color: #eb5757;
+        }
+
+        & ul li a {
+            color: black;
+        }
+
+        & .contactenos {
+            background-color: white;
+            border: solid 2px #eb5757;
+            color: #eb5757;
+            padding: 12px 25px;
+            border-radius: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-left: 3em;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: #eb5757;
+                color: white;
+                border: solid 2px #eb5757;
+                transition: 0.5s;
+            }
+        }
+
+        & .logo {
+            color: black;
+        }
+    }
 }
 
-/* menu hamburguesa */
-.nav__link {
-    margin-left: auto;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+.sticky-fix {
+    padding-bottom: 4px !important;
 }
 
+/* Menu Hamburguesa */
 .nav__menu {
     margin-left: auto;
     cursor: pointer;
     display: none;
-}
 
-.nav__img {
-    display: block;
-    width: 40px;
-    background: #eb5757;
-    border-radius: 8px;
+    .nav__img {
+        display: block;
+        width: 40px;
+        background: #eb5757;
+        border-radius: 8px;
+    }
 }
 
 .nav__close {
     display: var(--show, none);
-}
-
-/* mod para sticky seccion servicios y faqs - se usa important para sobrescribir unos estilos css de bootstrap */
-.sticky-servicios {
-    padding-bottom: 4px !important;
-}
-
-.sticky-faqs {
-    padding-bottom: 4px !important;
 }
 
 /* media querys */

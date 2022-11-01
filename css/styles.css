@@ -329,7 +329,7 @@ body {
 }
 .preguntas .contenedor-preguntas .contenedor-pregunta .pregunta {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
@@ -1001,7 +1001,7 @@ body {
   position: relative;
   display: grid;
   grid-template-rows: 100px 1fr;
-  background: url(../../img/cool-background.svg);
+  background: url(./../../img/cool-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

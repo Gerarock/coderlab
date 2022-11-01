@@ -120,7 +120,7 @@
             }
 
             .pregunta {
-                @include flex(column, nowrap, space-between, center, 0);
+                @include flex(row, nowrap, space-between, center, 0);
                 font-weight: 700;
                 font-size: 18px;
                 line-height: 15px;

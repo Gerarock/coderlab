@@ -1001,7 +1001,7 @@ body {
   position: relative;
   display: grid;
   grid-template-rows: 100px 1fr;
-  background: url(./../../img/cool-background.svg);
+  background: url(../img/cool-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

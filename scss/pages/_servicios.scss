@@ -102,32 +102,6 @@
     }
 }
 
-/* seccion titulo */
-.cover-top-test {
-    background-image: url(../img/cover_silver_flip_test.png);
-    background-size: cover;
-    background-position: center bottom;
-
-    .container-servicio-title {
-        height: 25rem;
-
-        .title-servicios {
-            gap: 1em;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-
-            .title-servicios__title {
-                font-size: 3rem;
-            }
-
-            .title-servicios__paragraph {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
 /* seccion titulo cards */
 .subtitle-servicios {
     color: $color-title;
@@ -226,7 +200,7 @@
 
 /* seccion info uno servicios */
 .bg-info-uno {
-    background-image: url(../../img/bg-tecnologias.svg);
+    background-image: url(../img/bg-tecnologias.svg);
     background-position: center;
     padding-top: 50px;
     padding-bottom: 50px;

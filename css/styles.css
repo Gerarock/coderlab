@@ -1063,28 +1063,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* seccion titulo */
-.cover-top-test {
-  background-image: url(../img/cover_silver_flip_test.png);
-  background-size: cover;
-  background-position: center bottom;
-}
-.cover-top-test .container-servicio-title {
-  height: 25rem;
-}
-.cover-top-test .container-servicio-title .title-servicios {
-  gap: 1em;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.cover-top-test .container-servicio-title .title-servicios .title-servicios__title {
-  font-size: 3rem;
-}
-.cover-top-test .container-servicio-title .title-servicios .title-servicios__paragraph {
-  margin-bottom: 20px;
-}
-
 /* seccion titulo cards */
 .subtitle-servicios {
   color: #001A49;
@@ -1172,7 +1150,7 @@ body {
 
 /* seccion info uno servicios */
 .bg-info-uno {
-  background-image: url(../../img/bg-tecnologias.svg);
+  background-image: url(../img/bg-tecnologias.svg);
   background-position: center;
   padding-top: 50px;
   padding-bottom: 50px;

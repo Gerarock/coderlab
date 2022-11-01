@@ -706,9 +706,9 @@ body {
   grid-template-rows: 100px 1fr;
   color: #fff;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, hsla(243deg, 62%, 33%, 0.459), hsla(0deg, 90%, 12%, 0.664)), url(../../img/nosotros-bg.jpeg);
+  background: -webkit-linear-gradient(to right, hsla(243deg, 62%, 33%, 0.459), hsla(0deg, 90%, 12%, 0.664)), url(../img/nosotros-bg.jpeg);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, hsla(243deg, 62%, 33%, 0.459), hsla(0deg, 90%, 12%, 0.664)), url(../../img/nosotros-bg.jpeg);
+  background: linear-gradient(to right, hsla(243deg, 62%, 33%, 0.459), hsla(0deg, 90%, 12%, 0.664)), url(../img/nosotros-bg.jpeg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: 100%;
@@ -779,7 +779,7 @@ body {
   padding-bottom: 20%;
   padding-top: 5em;
   box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.2862745098);
-  background-image: url(../../img/plantas2-bg.jpeg);
+  background-image: url(../img/plantas2-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

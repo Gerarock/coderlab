@@ -1065,7 +1065,7 @@ body {
 
 /* seccion titutlo */
 .cover-top-test {
-  background-image: url(../../img/cover_silver_flip_test.png);
+  background-image: url(../img/cover_silver_flip_test.png);
   background-size: cover;
   background-position: center bottom;
 }

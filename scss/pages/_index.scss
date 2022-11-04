@@ -132,8 +132,7 @@
     .portada-dos {
         text-align: center;
         background: #f7f7f8;
-        padding-top: 30px;
-        padding-bottom: 70px;
+        padding: 5em 0 5em 0;
         clip-path: polygon(0 12%, 100% 0, 100% 83%, 0% 100%);
         //background: linear-gradient(130deg, #ebecef 0%, #ffffff 100%);
 
@@ -149,13 +148,10 @@
         }
 
         .portada-dos__main {
-            padding-top: 80px;
-            display: grid;
-            width: 90%;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
             gap: 1em;
-            overflow: hidden;
-            grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+            padding-top: 10%;
 
             .portada-dos__icons {
                 display: grid;
@@ -209,21 +205,47 @@
     }
 }
 
-/* media queries */
-@media (max-width:1200px) {
-
-    /* hero */
-    .hero__title {
-        font-size: 2.5rem;
+/* media queries 
+@media screen and (max-width: 968px)
+@media screen and (max-width: 768px) 
+@media screen and (max-width: 576px) 
+*/
+@media screen and (max-width: 968px) {
+    .fade-in .hero .hero__container .hero__title {
+        font-size: 2rem;
     }
 }
 
-@media (max-width:600px) {
-    .hero__title {
+@media (max-width:768px) {
+    .fade-in .hero .hero__container .hero__title {
         font-size: 2rem;
     }
 
-    .hero__paragraph {
-        font-size: 1rem;
+    .fade-in .portada-uno__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .fade-in .portada-uno__container .portada-uno__picture .portada-uno__img {
+        width: 100%;
+    }
+
+    .fade-in .portada-dos .portada-dos__main {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .fade-in .arrow {
+        background: #d25564;
+        height: 50px;
+    }
+
+    .fade-in .hero .hero__container {
+        padding-bottom: 20em;
     }
 }

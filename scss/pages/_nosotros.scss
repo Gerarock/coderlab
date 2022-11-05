@@ -228,7 +228,7 @@
             .info-uno__img {
                 width: 100%;
                 display: block;
-                border-radius: 20px;
+                margin: auto;
             }
         }
 
@@ -292,21 +292,90 @@
     }
 }
 
-/* media queries */
-@media (max-width:1200px) {
+/* media queries 
+@media screen and (max-width: 968px)
+@media screen and (max-width: 768px) 
+@media screen and (max-width: 576px) 
+*/
+@media screen and (max-width: 968px) {
+    .nosotros .nosotros__container .nosotros__picture {
+        width: 360px;
+        margin-left: 3em;
+    }
 
-    /* hero */
-    .hero__title {
-        font-size: 2.5rem;
+    .info-uno .info-uno__container .info-uno__picture .info-uno__img {
+        width: 90%;
+    }
+
+    .info-uno .info-uno__container {
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+
+    .caracteristicas .caracteristicas__main {
+        width: 80%;
+        gap: 5em;
     }
 }
 
-@media (max-width:600px) {
-    .hero__title {
+@media (max-width:768px) {
+    .fade-in .hero .hero__container .hero__title {
         font-size: 2rem;
     }
 
-    .hero__paragraph {
-        font-size: 1rem;
+    .fade-in .portada-uno__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .fade-in .portada-uno__container .portada-uno__picture .portada-uno__img {
+        width: 100%;
+    }
+
+    .fade-in .portada-dos .portada-dos__main {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding-top: 10%;
+    }
+
+    .nosotros .nosotros__container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4em;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros .nosotros__container .subtitle-nosotros {
+        position: initial;
+    }
+
+    .info-uno .info-uno__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        align-items: center;
+        text-align: center;
+        padding: 12% 0 8% 0;
+    }
+
+    .info-uno .info-uno__container .info-uno-nosotros {
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nosotros .nosotros__container .nosotros__picture {
+        margin-left: 0em;
+    }
+
+    .caracteristicas {
+        padding-bottom: 50px;
+    }
+
+    .caracteristicas .caracteristicas__main {
+        gap: 3em;
     }
 }

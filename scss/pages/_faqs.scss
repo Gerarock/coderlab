@@ -14,6 +14,10 @@
         }
     }
 
+    .bg-color-faqs {
+        background-color: #f8f9fc;
+    }
+
     .hero-faqs {
         width: 100%;
         height: 100vh;
@@ -158,42 +162,6 @@
 
     .contenedor-preguntas.activo {
         display: grid;
-    }
-}
-
-/* seccion portada tres */
-.section-bottom {
-    text-align: center;
-
-    .subtitle-section-bottom {
-        color: $color-title;
-        font-size: 2rem;
-        margin-bottom: 25px;
-        position: relative
-    }
-
-    .section-bottom__text {
-        width: 60%;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-
-    .btn-section-bottom {
-        display: inline-block;
-        background-color: #eb5757;
-        justify-self: center;
-        color: #fff;
-        text-decoration: none;
-        padding: 13px 30px;
-        border-radius: 32px;
-        box-shadow: 1px 1px 30px -5px #20202049;
-        transition: box-shadow 500ms;
-        font-size: 18px;
-        font-weight: 600;
-
-        &:hover {
-            box-shadow: 1px 1px 30px -5px #20202085;
-        }
     }
 }
 

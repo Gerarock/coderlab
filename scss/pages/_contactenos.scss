@@ -14,18 +14,14 @@
       }
    }
 
+   .bg-color {
+      background-color: #f7f7f8;
+   }
+
    .hero-contactenos {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      height: 100vh;
-      min-height: 500px;
-      max-height: 100px;
-      display: grid;
-      grid-template-rows: 100px 1fr;
-      color: #fff;
-      background: url(../img/background-page.svg);
-      background-color: #e99d15;
-      background-repeat: no-repeat;
-      background-size: 100%;
 
       .text-logo {
          color: #eb5757;
@@ -33,73 +29,123 @@
    }
 
    /* seccion formulario */
-   .container-form {
-      width: 100%;
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20%;
-      margin-top: 8em;
-      margin-bottom: 6em;
+   .section-contact {
+      min-height: 100vh;
+      padding-top: 60px;
+      //background: #f7f7f8;
+      background-image: linear-gradient(-7deg, #f7f7f8 43%, #910e60 40%, #382458);
 
-      & h2 {
-         margin-bottom: 15px;
-         font-size: 35px;
-      }
+      .container {
+         max-width: 1280px;
+         margin: 0 auto;
+         padding-left: 32px;
+         padding-right: 32px;
 
-      & p {
-         font-size: 17px;
-         line-height: 1.6;
-         margin-bottom: 30px;
-      }
+         @media (min-width: 768px) {
+            padding-left: 64px;
+            padding-right: 64px;
+         }
 
-      & a {
-         font-size: 17px;
-         display: inline-block;
-         text-decoration: none;
-         width: 100%;
-         margin-bottom: 15px;
-         color: black;
-         font-weight: 700;
-      }
+         @media (min-width: 1024px) {
+            padding-left: 128px;
+            padding-right: 128px;
+         }
 
-      & a i {
-         color: #eb5757;
-         margin-right: 10px;
-      }
+         h1 {
+            color: #fff;
+            font-size: 36px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+         }
 
-      & form .campo,
-      textarea {
-         width: 100%;
-         padding: 15px 10px;
-         font-size: 15px;
-         border: 1px solid #dbdbdb;
-         margin-bottom: 20px;
-         border-radius: 3px;
-         outline: 0px;
-      }
+         p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 50px;
+         }
 
-      & form textarea {
-         max-width: 530px;
-         min-width: 530px;
-         min-height: 140px;
-         max-height: 150px;
-      }
+         form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 16px;
+            background-color: #FFF;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 
-      & .btn-enviar {
-         padding: 15px;
-         font-size: 16px;
-         border: none;
-         outline: 0px;
-         background: #eb5757;
-         color: white;
-         border-radius: 3px;
-         cursor: pointer;
-         transition: all 300ms ease;
+            @media (min-width: 768px) {
+               grid-template-columns: repeat(2, 1fr);
+            }
 
-         &:hover {
-            background: orange;
+            .form-group {
+
+               &.full {
+                  grid-column: 1 / -1;
+               }
+
+               label {
+                  display: block;
+                  margin-bottom: 6px;
+                  margin-top: 3px;
+                  color: #888;
+                  font-size: 14px;
+               }
+
+               .form-element {
+                  appearance: none;
+                  outline: none;
+                  border: none;
+                  display: block;
+                  width: 100%;
+                  border-radius: 8px;
+                  padding: 12px 16px;
+                  background-color: #F3F3F3;
+                  color: #757575;
+                  transition: 0.6s;
+
+                  &:focus {
+                     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+                     background-color: #FFF;
+                  }
+               }
+
+               select {
+                  background-image: url(../img/flecha.png);
+                  background-repeat: no-repeat;
+                  background-position: right center;
+              }
+
+               textarea {
+                  resize: none;
+                  min-height: 150px;
+               }
+            }
+
+            .submit-group {
+               grid-column: 1 / -1;
+               text-align: left;
+
+               input[type="submit"] {
+                  appearance: none;
+                  border: none;
+                  outline: none;
+                  background: none;
+                  padding: 13px 35px;
+                  background-color: #eb5757;
+                  border-radius: 8px;
+                  color: #FFF;
+                  cursor: pointer;
+                  transition: 0.6s;
+                  margin-top: 5px;
+
+                  &:hover {
+                     background-color: #e99d15;
+                     box-shadow: 1px 1px 30px -5px #20202049;
+                  }
+               }
+            }
          }
       }
    }

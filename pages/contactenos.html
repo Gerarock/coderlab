@@ -50,31 +50,31 @@
                     Intentaremos volver a usted dentro de las 48 horas. Si no respondemos dentro de ese tiempo, no dude
                     en utilizar el formulario de nuevo.
                 </p>
-                <form>
+                <form action="" method="" id="formulario">
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
-                        <input type="text" name="nombre" id="nombre" required class="form-element"
-                            placeholder="Ingrese su nombre" />
+                        <input type="text" id="nombre" class="form-element" placeholder="Ingrese su nombre" />
+                        <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido *</label>
-                        <input type="text" name="apellido" id="apellido" required class="form-element"
-                            placeholder="Ingrese su apellido" />
+                        <input type="text" id="apellido" class="form-element" placeholder="Ingrese su apellido" />
+                        <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" name="email" id="email" required class="form-element"
-                            placeholder="Ingrese su email" />
+                        <input type="email" id="email" class="form-element" placeholder="Ingrese su email" />
+                        <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono contacto *</label>
-                        <input type="text" name="telefono" id="telefono" required class="form-element"
-                            placeholder="Ingrese su teléfono" />
+                        <input type="text" id="telefono" class="form-element" placeholder="Ingrese su teléfono" />
+                        <p class="msg-errors"></p>
                     </div>
                     <div class="form-group full">
                         <label for="servicios">Servicios *</label>
-                        <select name="servicios" id="servicios" class="form-element" required placeholder="Ingrese sus comentarios">
-                            <option hidden selected>Selecciona un servicio</option>
+                        <select id="servicios" class="form-element" placeholder="Ingrese sus comentarios">
+                            <option hidden selected>Seleccione un servicio</option>
                             <option value="disenoWeb">Diseño Web</option>
                             <option value="desarrolloWeb">Desarrollo Web</option>
                             <option value="soporteInformatico">Soporte Informático</option>
@@ -82,11 +82,12 @@
                     </div>
                     <div class="form-group full">
                         <label for="comentarios">Comentarios *</label>
-                        <textarea name="comentarios" id="comentarios" class="form-element" required
+                        <textarea id="comentarios" class="form-element"
                             placeholder="Ingrese sus comentarios"></textarea>
+                        <p class="msg-errors"></p>
                     </div>
-                    <div class="form-group">
-                        <label for="telefono">* campos requeridos para enviar</label>
+                    <div class="form-group full">
+                        <label>* campos requeridos para enviar</label>
                     </div>
                     <div class="submit-group">
                         <input type="submit" value="Enviar Mensaje" />
@@ -137,6 +138,7 @@
     </footer>
     <script src="../js/menu.js"></script>
     <script src="../js/nav-mod.js"></script>
+    <script src="../js/form.js"></script>
     <script src="https://kit.fontawesome.com/feb95a5faa.js" crossorigin="anonymous"></script>
 </body>
 

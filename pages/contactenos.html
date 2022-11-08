@@ -50,30 +50,30 @@
                     Intentaremos volver a usted dentro de las 48 horas. Si no respondemos dentro de ese tiempo, no dude
                     en utilizar el formulario de nuevo.
                 </p>
-                <form action="" method="" id="formulario">
+                <form action="https://formsubmit.co/gerardo.veliz.carreno@gmail.com" method="POST" id="formulario">
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" class="form-element" placeholder="Ingrese su nombre" />
+                        <input type="text" id="nombre" name="nombre" class="form-element" placeholder="Ingrese su nombre" />
                         <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido *</label>
-                        <input type="text" id="apellido" class="form-element" placeholder="Ingrese su apellido" />
+                        <input type="text" id="apellido" name="apellido" class="form-element" placeholder="Ingrese su apellido" />
                         <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" class="form-element" placeholder="Ingrese su email" />
+                        <input type="email" id="email" name="email" class="form-element" placeholder="Ingrese su email" />
                         <p class="msg-errors"></p>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono contacto *</label>
-                        <input type="text" id="telefono" class="form-element" placeholder="Ingrese su teléfono" />
+                        <input type="text" id="telefono" name="telefono" class="form-element" placeholder="Ingrese su teléfono" />
                         <p class="msg-errors"></p>
                     </div>
                     <div class="form-group full">
                         <label for="servicios">Servicios *</label>
-                        <select id="servicios" class="form-element" placeholder="Ingrese sus comentarios">
+                        <select id="servicios" name="servicios" class="form-element" placeholder="Ingrese sus comentarios">
                             <option hidden selected>Seleccione un servicio</option>
                             <option value="disenoWeb">Diseño Web</option>
                             <option value="desarrolloWeb">Desarrollo Web</option>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="form-group full">
                         <label for="comentarios">Comentarios *</label>
-                        <textarea id="comentarios" class="form-element"
+                        <textarea id="comentarios" name="comentarios" class="form-element"
                             placeholder="Ingrese sus comentarios"></textarea>
                         <p class="msg-errors"></p>
                     </div>

@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     const nombre = document.getElementById('nombre');
     const apellido = document.getElementById('apellido');
     const email = document.getElementById('email');
-    const telefono = document.getElementById('telefono');
+    /* const telefono = document.getElementById('telefono'); */
     const comentarios = document.getElementById('comentarios');
 
     /* establece el evento submit */
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
         const nombreValor = nombre.value.trim();
         const apellidoValor = apellido.value.trim();
         const emailValor = email.value.trim();
-        const telefonoValor = telefono.value.trim();
+        /* const telefonoValor = telefono.value.trim(); */
         const comentariosValor = comentarios.value.trim();
 
         /* valida nombre vacio */
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
         (!emailValor) ? validaError(email, 'Campo vacio') : (!validaEmail(emailValor)) ? validaError(nombre, 'El email no es válido') : validaOk(email);
 
         /* valida telefono vacio */
-        (!telefonoValor) ? validaError(telefono, 'Campo vacio') : (!validaTelefono(telefonoValor)) ? validaError(telefono, 'El teléfono no es válido') : validaOk(telefono);
+/*         (!telefonoValor) ? validaError(telefono, 'Campo vacio') : (!validaTelefono(telefonoValor)) ? validaError(telefono, 'El teléfono no es válido') : validaOk(telefono); */
 
         /* valida largo comentario */
         (!comentariosValor) ? validaError(comentarios, 'Campo vacio') : (!validaComentarios(comentariosValor)) ? validaError(comentarios, 'El comentario es demasiado largo') : validaOk(comentarios);
@@ -61,9 +61,9 @@ window.addEventListener('load', () => {
     }
 
     /* funcion que valida el telefono */
-    const validaTelefono = (telefono) => {
+/*     const validaTelefono = (telefono) => {
         return /^[0-9]$/.test(telefono);
-    }
+    } */
 
     /* funcione que valida el largo de comentarios */
     const validaComentarios = (comentarios) => {

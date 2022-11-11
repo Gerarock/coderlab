@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" 
-          content="CODER, CODERLAB, TECNOLOGIA, TECNOLOGÍA, PAGINA WEB, PROGRAMACIÓN, INFORMATICA, INFORMÁTICA, DESAROLLO,CODIGO, CÓDIGO, SOFTWARE, DESARROLLO SOFTWARE, SOPORTE INFORMÁTICO">
+    <meta name="keywords"
+        content="CODER, CODERLAB, TECNOLOGIA, TECNOLOGÍA, PAGINA WEB, PROGRAMACIÓN, INFORMATICA, INFORMÁTICA, DESAROLLO,CODIGO, CÓDIGO, SOFTWARE, DESARROLLO SOFTWARE, SOPORTE INFORMÁTICO">
     <meta name="description" content="Servicios integrales de informática, nos ajustamos a tus necesidades.">
     <title>Coderlab | Convertimos tus ideas en una realidad.</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
@@ -36,23 +36,32 @@
                 <li>
                     <a href="./pages/contactenos.html" class="contactenos">CONTÁCTENOS</a>
                 </li>
-                <img src="./img/close.svg" class="nav__close" alt="botón cerrar menú hamburguesa">
+                <!--                 <img src="./img/close.svg" class="nav__close" alt="botón cerrar menú hamburguesa"> -->
             </ul>
-            <div class="nav__menu">
-                <img src="./img/menu.svg" class="nav__img" alt="botón abrir menú hamburguesa">
-            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
         </nav>
         <section class="hero__container container">
             <h1 class="hero__title">¡Te ayudamos a despegar tu negocio!</h1>
             <p class="hero__paragraph">Convertimos tus ideas en una realidad</p>
-            <a href="#" class="btn-hero">Comienza ahora</a>
+            <a href="#start" class="btn-hero">Comienza ahora</a>
         </section>
     </header>
+    <nav class="mobile-nav">
+        <a href="./index.html" class="select-mobile">Inicio</a>
+        <a href="./pages/nosotros.html">Nosotros</a>
+        <a href="./pages/servicios.html">Servicios</a>
+        <a href="./pages/faqs.html">Preguntas Frecuentes</a>
+        <a href="./pages/contactenos.html">Contáctenos</a>
+        <!--                 <img src="./img/close.svg" class="nav__close" alt="botón cerrar menú hamburguesa"> -->
+    </nav>
     <div class="arrow"></div>
     <main>
-        <section class="portada-uno__container container">
+        <section id="start" class="portada-uno__container container">
             <figure class="portada-uno__picture">
-                <img src="./img/devices.svg" class="portada-uno__img" alt="imagen con computador, tablet y teléfono móvil">
+                <img src="./img/devices.svg" class="portada-uno__img"
+                    alt="imagen con computador, tablet y teléfono móvil">
             </figure>
             <div class="pt-4">
                 <h2 class="subtitle-portada-uno">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
@@ -143,7 +152,8 @@
             <p>Todos los derechos reservados © 2021 <b>Coderlab</b></p>
         </div>
     </footer>
-    <script src="./js/menu.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
+    <script src="./js/menuResponsive.js"></script>
     <script src="./js/nav-mod.js"></script>
     <script src="https://kit.fontawesome.com/feb95a5faa.js" crossorigin="anonymous"></script>
 </body>

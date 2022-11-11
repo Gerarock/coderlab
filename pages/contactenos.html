@@ -50,47 +50,48 @@
                     Intentaremos volver a usted dentro de las 48 horas. Si no respondemos dentro de ese tiempo, no dude
                     en utilizar el formulario de nuevo.
                 </p>
-                <form action="https://formsubmit.co/gerardo.veliz.carreno@gmail.com" method="POST" id="formulario">
+                <form action="https://formspree.io/f/xyyvljdy" method="POST" id="formulario">
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="nombre" class="form-element" placeholder="Ingrese su nombre" />
-                        <p class="msg-errors"></p>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre" />
+                        <small class="error-text">Ingrese un nombre</small>
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido *</label>
-                        <input type="text" id="apellido" name="apellido" class="form-element" placeholder="Ingrese su apellido" />
-                        <p class="msg-errors"></p>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" />
+                        <small class="error-text">Ingrese un apellido</small>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" class="form-element" placeholder="Ingrese su email" />
-                        <p class="msg-errors"></p>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su email" />
+                        <small class="error-text">Ingrese un email válido</small>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono contacto *</label>
-                        <input type="text" id="telefono" name="telefono" class="form-element" placeholder="Ingrese su teléfono" />
-                        <p class="msg-errors"></p>
+                        <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono" />
+                        <small class="error-text">Ingrese un teléfono válido</small>
                     </div>
                     <div class="form-group full">
                         <label for="servicios">Servicios *</label>
-                        <select id="servicios" name="servicios" class="form-element" placeholder="Ingrese sus comentarios">
-                            <option hidden selected>Seleccione un servicio</option>
+                        <select id="servicios" name="servicios" placeholder="Ingrese sus comentarios">
+                            <option hidden selected value="false">Seleccione un servicio</option>
                             <option value="disenoWeb">Diseño Web</option>
                             <option value="desarrolloWeb">Desarrollo Web</option>
                             <option value="soporteInformatico">Soporte Informático</option>
+                            <small class="error-text">Ingrese un email válido</small>
                         </select>
                     </div>
                     <div class="form-group full">
                         <label for="comentarios">Comentarios *</label>
-                        <textarea id="comentarios" name="comentarios" class="form-element"
-                            placeholder="Ingrese sus comentarios"></textarea>
-                        <p class="msg-errors"></p>
+                        <textarea id="comentarios" name="comentarios" placeholder="Ingrese sus comentarios"></textarea>
+                        <small class="error-text">Ingrese un comentario</small>
                     </div>
                     <div class="form-group full">
                         <label>* campos requeridos para enviar</label>
                     </div>
                     <div class="submit-group">
-                        <input type="submit" value="Enviar Mensaje" />
+                        <button type="submit" id="submit-btn" disabled>Enviar</button>
+                        <!--  <input type="submit" id="submit-btn" disabled value="Enviar Mensaje" /> -->
                     </div>
                 </form>
             </div>
@@ -136,9 +137,10 @@
             <p>Todos los derechos reservados © 2021 <b>Coderlab</b></p>
         </div>
     </footer>
+    <script defer src="../js/form.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/nav-mod.js"></script>
-    <script src="../js/form.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/feb95a5faa.js" crossorigin="anonymous"></script>
 </body>
 

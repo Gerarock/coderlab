@@ -1,72 +1,100 @@
-/* referencia de elementos formulario */
-window.addEventListener('load', () => {
-    const form = document.querySelector('#formulario');
-    const nombre = document.getElementById('nombre');
-    const apellido = document.getElementById('apellido');
-    const email = document.getElementById('email');
-    /* const telefono = document.getElementById('telefono'); */
-    const comentarios = document.getElementById('comentarios');
+const $form = document.getElementById('formulario');
+const $submitButton = document.getElementById('submit-btn');
 
-    /* establece el evento submit */
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        validaCampos();
-    })
+let timeout = null;
 
-    /* captura valores ingresados en formulario */
-    const validaCampos = () => {
-        const nombreValor = nombre.value.trim();
-        const apellidoValor = apellido.value.trim();
-        const emailValor = email.value.trim();
-        /* const telefonoValor = telefono.value.trim(); */
-        const comentariosValor = comentarios.value.trim();
+let errors = {
+    nombre: true,
+    apellido: true,
+    email: true,
+    telefono: true,
+    comentarios: true
+};
 
-        /* valida nombre vacio */
-        (!nombreValor) ? validaError(nombre, 'Campo vacio') : validaOk(nombre);
+const mailformatRegex = /^[^@]+@\w+(\.\w+)+\w$/;
+const telefonoformatRegex = /^[0-9-]+$/;
 
-        /* valida apellido vacio */
-        (!apellidoValor) ? validaError(apellido, 'Campo vacio') : validaOk(apellido);
-
-        /* valida email vacio y formato valido */
-        (!emailValor) ? validaError(email, 'Campo vacio') : (!validaEmail(emailValor)) ? validaError(nombre, 'El email no es válido') : validaOk(email);
-
-        /* valida telefono vacio */
-/*         (!telefonoValor) ? validaError(telefono, 'Campo vacio') : (!validaTelefono(telefonoValor)) ? validaError(telefono, 'El teléfono no es válido') : validaOk(telefono); */
-
-        /* valida largo comentario */
-        (!comentariosValor) ? validaError(comentarios, 'Campo vacio') : (!validaComentarios(comentariosValor)) ? validaError(comentarios, 'El comentario es demasiado largo') : validaOk(comentarios);
-    }
-
-    /* funciones que validan campos vacios */
-    const validaError = (input, msje) => {
-        const formControl = input.parentElement;
-        const valida = formControl.querySelector('p');
-        valida.className = 'error-msgs';
-        valida.innerText = msje;
-
-        input.className = 'form-element form-error';
-    }
-
-    const validaOk = (input) => {
-        const formControl = input.parentElement;
-        const valida = formControl.querySelector('p');
-        valida.className = '';
-
-        input.className = 'form-element form-ok'
-    }
-
-    /* funcion que valida el email */
-    const validaEmail = (email) => {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    }
-
-    /* funcion que valida el telefono */
-/*     const validaTelefono = (telefono) => {
-        return /^[0-9]$/.test(telefono);
-    } */
-
-    /* funcione que valida el largo de comentarios */
-    const validaComentarios = (comentarios) => {
-        return /^[\s\S]{0,5000}$/.test(comentarios);
+document.querySelectorAll('.form-group').forEach((box) => {
+    const boxInput = box.querySelector('input, textarea');
+    if (boxInput) {
+        boxInput.addEventListener('keydown', (event) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                validation(box, boxInput);
+            }, 300);
+        });
     }
 });
+
+validation = (box, boxInput) => {
+    if (boxInput.value == '') {
+        showError(true, box, boxInput);
+    } else {
+        showError(false, box, boxInput);
+    }
+
+    if (boxInput.name == 'email') {
+        if (!boxInput.value.match(mailformatRegex)) {
+            showError(true, box, boxInput);
+        } else {
+            showError(false, box, boxInput);
+        }
+    }
+
+    if (boxInput.name == 'telefono') {
+        if (!boxInput.value.match(telefonoformatRegex)) {
+            showError(true, box, boxInput);
+        } else {
+            showError(false, box, boxInput);
+        }
+    }
+    submitController();
+};
+
+showError = (check, box, boxInput) => {
+    if (check) {
+        box.classList.remove('form-success');
+        box.classList.add('form-error');
+        errors[boxInput.name] = true;
+    } else {
+        box.classList.remove('form-error');
+        box.classList.add('form-success');
+        errors[boxInput.name] = false;
+    }
+};
+
+submitController = () => {
+    if (errors.nombre || errors.apellido || errors.email || errors.telefono || errors.comentarios) {
+        $submitButton.toggleAttribute('disabled', true);
+    } else {
+        $submitButton.toggleAttribute('disabled', false);
+    }
+};
+
+$form.addEventListener('submit', handleSubmit);
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        this.reset();
+        $submitButton.toggleAttribute('disabled', true);
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Muchas Gracias',
+            text: 'Pronto nos contáctaremos para ayudarte',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+          })
+    }
+}

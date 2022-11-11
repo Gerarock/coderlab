@@ -16,7 +16,7 @@
 
     .hero-nosotros {
         width: 100%;
-        height: 100vh;
+        height: 500px;
         min-height: 600px;
         max-height: 1000px;
         position: relative;
@@ -57,7 +57,7 @@
         .hero-nosotros__container {
             @include flex(column, nowrap, center, center, 1em);
             padding-bottom: 100px;
-            padding-top: 25em;
+            padding-top: 300px;
 
             .hero-nosotros__title {
                 font-size: 3rem;
@@ -110,6 +110,11 @@
     .main__paragraph {
         margin-bottom: 20px;
     }
+
+/*     .img-fluid {
+        width: 100%;
+        height: auto;
+    } */
 }
 
 /* seccion nosotros */
@@ -319,11 +324,16 @@
 }
 
 @media (max-width:768px) {
-    .fade-in .hero .hero__container .hero__title {
-        font-size: 2rem;
+    .fade-in .hero-nosotros .hero-nosotros__container {
+        padding-top: 17em;
     }
 
-    .fade-in .portada-uno__container {
+    
+/*     .fade-in .hero .hero__container .hero__title {
+        font-size: 2rem;
+    } */
+
+/*     .fade-in .portada-uno__container {
         display: flex;
         flex-direction: column;
         gap: 4em;
@@ -331,24 +341,24 @@
 
     .fade-in .portada-uno__container .portada-uno__picture .portada-uno__img {
         width: 100%;
-    }
+    } */
 
-    .fade-in .portada-dos .portada-dos__main {
+/*     .fade-in .portada-dos .portada-dos__main {
         display: flex;
         flex-direction: column;
         gap: 4em;
         padding-top: 10%;
-    }
+    } */
 
-    .nosotros .nosotros__container {
+/*     .nosotros .nosotros__container {
         display: flex;
         flex-direction: column-reverse;
         gap: 4em;
         align-items: center;
         text-align: center;
-    }
+    } */
 
-    .nosotros .nosotros__container .subtitle-nosotros {
+/*     .nosotros .nosotros__container .subtitle-nosotros {
         position: initial;
     }
 
@@ -363,11 +373,13 @@
 
     .info-uno .info-uno__container .info-uno-nosotros {
         position: initial;
-    }
+    } */
 }
 
 @media screen and (max-width: 576px) {
-    .nosotros .nosotros__container .nosotros__picture {
+
+
+/*     .nosotros .nosotros__container .nosotros__picture {
         margin-left: 0em;
     }
 
@@ -377,5 +389,5 @@
 
     .caracteristicas .caracteristicas__main {
         gap: 3em;
-    }
+    } */
 }

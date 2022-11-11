@@ -217,6 +217,14 @@
 }
 
 @media (max-width:768px) {
+    .fade-in .portada-dos {
+        clip-path: none;
+    }
+
+    .fade-in .portada-uno__container .portada-uno__picture {
+        max-width: 300px;
+    }
+
     .fade-in .hero .hero__container .hero__title {
         font-size: 2rem;
     }
@@ -224,18 +232,63 @@
     .fade-in .portada-uno__container {
         display: flex;
         flex-direction: column;
-        gap: 4em;
+        padding-top: 15%;
+        gap: 3em;
     }
 
     .fade-in .portada-uno__container .portada-uno__picture .portada-uno__img {
         width: 100%;
     }
 
+    .fade-in .portada-uno__container .subtitle-portada-uno {
+        text-align: center;
+        margin-bottom: 8%;
+    }
+
+    .fade-in .portada-uno__container .portada-uno__paragraph {
+        text-align: justify;
+        margin-bottom: 5%;
+    }
+
+    .fade-in .portada-dos {
+        padding: 0 0 4em 0;
+    }
+
     .fade-in .portada-dos .portada-dos__main {
         display: flex;
         flex-direction: column;
-        gap: 4em;
-        padding-top: 10%;
+        gap: 5em;
+        padding-top: 15%;
+    }
+
+    .fade-in .portada-dos .subtitle-portada-dos {
+        margin-top: 10%;
+        margin-bottom: 8%;
+    }
+
+    .fade-in .portada-dos .portada-dos__paragraph {
+        text-align: justify;
+    }
+
+    .fade-in .portada-tres-index .subtitle-portada-tres {
+        margin-bottom: 5%;
+        margin-top: 7%;
+    }
+
+    .fade-in .portada-tres-index .portada-tres-index__text {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .fade-in .hero {
+        background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
+        background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
+    }
+
+    .fade-in .arrow {
+        background: #d25564;
+        height: 50px;
     }
 }
 

@@ -1,13 +1,12 @@
-/* nav */
+/* NAV */
 nav {
+    display: flex;
+    flex-direction: row;
     position: fixed;
     width: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 100px;
+    padding: 30px;
     transition: 0.5s;
     z-index: 1000;
 
@@ -15,7 +14,6 @@ nav {
         position: relative;
         font-size: 1.9em;
         text-decoration: none;
-        letter-spacing: 2px;
         color: white;
         text-transform: uppercase;
         font-weight: 700;
@@ -39,7 +37,7 @@ nav {
         text-decoration: none;
         color: white;
         font-weight: bold;
-        margin: 0 20px;
+        margin: 0 15px;
         letter-spacing: 0.5px;
     }
 
@@ -78,11 +76,10 @@ nav {
         background-color: #eb5757;
         color: white;
         padding: 12px 25px;
-        border-radius: 32px;
         font-size: 13px;
         font-weight: 700;
         border-radius: 6px;
-        margin-left: 3em;
+        margin-left: 2em;
         transition: 0.5s;
 
         &:hover {
@@ -91,8 +88,9 @@ nav {
         }
     }
 
+    /* NAV STICKY */
     &.sticky {
-        padding: 15px 100px;
+        padding: 10px;
         background-color: rgb(255 255 255 / 97%);
         box-shadow: 1px 5px 10px 0px #00000010;
 
@@ -108,12 +106,12 @@ nav {
             background-color: white;
             border: solid 2px #eb5757;
             color: #eb5757;
-            padding: 12px 25px;
+            padding: 10px 25px;
             border-radius: 32px;
             font-size: 13px;
             font-weight: 700;
             border-radius: 6px;
-            margin-left: 3em;
+            margin-left: 2em;
             transition: 0.5s;
 
             &:hover {
@@ -127,9 +125,24 @@ nav {
         & .logo {
             color: black;
         }
+
+        /* MENU HAMBURGUESA STICKY */
+        @extend .hamburger;
+
+        .hamburger .bar,
+        .hamburger:after,
+        .hamburger:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #eb5757;
+            margin: 6px 0px;
+            transition: 0.4s;
+        }
     }
 
-    /* Menu Hamburguesa */
+    /* MENU HAMBURGUESA */
     .hamburger {
         position: relative;
         display: block;
@@ -147,7 +160,7 @@ nav {
         content: '';
         display: block;
         width: 100%;
-        height: 5px;
+        height: 4px;
         background-color: #FFF;
         margin: 6px 0px;
         transition: 0.4s;
@@ -174,124 +187,78 @@ nav {
     min-height: 100vh;
     display: block;
     z-index: 98;
-    //background-color: #12002F;
-    background-color: rgba(255, 255, 255, 0);
+    //background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(80 80 80 / 72%);
     backdrop-filter: blur(20px);
-    padding-top: 50%;
-    transition: 0.7s;
+    padding-top: 250px;
+    transition: 0.5s;
 }
 
 .mobile-nav.is-active {
     left: 0;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .mobile-nav a {
     display: block;
     width: 100%;
-    max-width: 230px;
+    max-width: 270px;
     margin: 0 auto 30px;
     text-align: center;
     padding: 7px 0;
-    //background-color: #1f103F;
     color: #FFF;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
 
     &.select-mobile {
         color: #ed3c57;
     }
 }
 
-/* .mobile-nav a:hover {
-    background-color: #24104f;
-} */
-
 .sticky-fix {
     padding-bottom: 4px !important;
 }
 
-/* media querys */
-@media (max-width:1200px) {
-    .main-logo {
-        margin-left: -1em;
-    }
-
-    .nav__menu {
-        display: block;
-        margin-right: 1em;
-    }
-
-    /* Nav */
-    .nav__link--menu {
-        position: fixed;
-        background-color: rgb(49, 48, 48);
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        z-index: 2;
-        opacity: 0;
-        pointer-events: none;
-        transition: .7s opacity;
-    }
-
-    .nav__link--show {
-        --show: block;
-        opacity: 1;
-        pointer-events: unset;
-    }
-
-    .nav__close {
-        position: absolute;
-        top: 30px;
-        right: 50px;
-        width: 35px;
-        cursor: pointer;
-    }
-
-    nav.sticky .contactenos {
-        background-color: #eb5757;
-        color: #fff;
-        padding: 12px 25px;
-        border-radius: 32px;
-        font-size: 13px;
-        font-weight: 700;
-        border-radius: 6px;
-        margin-left: 3em;
-        transition: 0.5s;
-    }
-
-    nav.sticky ul li a {
-        color: #fff;
-    }
-}
-
-@media (max-width:600px) {
-    .main-logo {
-        margin-left: -4em;
-    }
-
-    .nav__menu {
-        display: block;
-        margin-right: -4em;
-    }
-
-    nav .logo {
-        font-size: 1.2em;
-    }
-}
-
-@media (min-width: 768px) {
+/* MEDIA QUERYS NAV */
+@media screen and (min-width: 993px) {
     nav .mobile-nav {
         display: none;
     }
 
     nav .hamburger {
         display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav__link--menu {
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav .hamburger {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav .hamburger {
+        margin-right: 30px;
+    }
+
+    nav .logo {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav .hamburger {
+        margin-right: 30px;
+    }
+
+    nav .logo {
+        font-size: 1.5em;
+        margin-left: 20px;
     }
 }

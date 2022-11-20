@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" 
-          content="CODER, CODERLAB, TECNOLOGIA, TECNOLOGÍA, PAGINA WEB, PROGRAMACION, PROGRAMACIÓN, INFORMATICA, INFORMÁTICA, DESAROLLO, CODIGO, 
+    <meta name="keywords" content="CODER, CODERLAB, TECNOLOGIA, TECNOLOGÍA, PAGINA WEB, PROGRAMACION, PROGRAMACIÓN, INFORMATICA, INFORMÁTICA, DESAROLLO, CODIGO, 
                    CÓDIGO, NOSOTROS, SOFTWARE, DESARROLLO SOFTWARE, SOPORTE, SOPORTE INFORMÁTICO">
-    <meta name="description" content="Servicios integrales de informática, contactános para transfomar digitalmente tus ideas.">
+    <meta name="description"
+        content="Servicios integrales de informática, contactános para transfomar digitalmente tus ideas.">
     <title>Coderlab | Nosotros</title>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class="fade-in">
-    <header class="hero-nosotros">
+    <header class="banner-nosotros">
         <nav>
             <div class="main-logo">
                 <a href="../index.html" class="logo">&lt;Coder<span class="text-logo">lab/></span></a>
@@ -37,109 +36,126 @@
                 <li>
                     <a href="../pages/contactenos.html" class="contactenos">CONTÁCTENOS</a>
                 </li>
-                <img src="../img/close.svg" class="nav__close" alt="botón cerrar menú hamburguesa">
             </ul>
-            <div class="nav__menu">
-                <img src="../img/menu.svg" class="nav__img" alt="botón abrir menú hamburguesa">
-            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
         </nav>
         <div class="wave" style="height: 150px; overflow: hidden;">
             <div style="height: 150px; overflow: hidden;">
                 <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                        style="height: 100%; width: 100%;">
+                        style="height: 150%; width: 100%;">
                         <path d="M-61.51,-50.81 C102.14,298.52 326.75,-95.22 503.95,64.64 L503.95,150.50 L0.00,150.00 Z"
-                            style="stroke: none; fill: #f8f8f8;">
+                            style="stroke: none; fill: #1f1541;">
                         </path>
                     </svg>
                 </div>
             </div>
         </div>
-        <section class="hero-nosotros__container container">
-            <h1 class="hero-nosotros__title">¡Conocenos!</h1>
-            <p class="hero-nosotros__paragraph">Te brindamos la ayuda que necesitas para crecer tu negocio</p>
-            <a href="#" class="btn-hero">Comienza ahora</a>
+        <section class="banner-nosotros-text">
+            <div class="container">
+                <h1 class="banner-nosotros-title">¡Conocenos!</h1>
+                <p class="banner-nosotros-paragraph">Te brindamos la ayuda que necesitas para crecer tu negocio</p>
+                <a href="#conocenos" class="banner-nosotros-button">Comienza ahora</a>
+            </div>
         </section>
     </header>
+    <nav class="mobile-nav">
+        <a href="../index.html" class="select-mobile">Inicio</a>
+        <a href="../pages/nosotros.html">Nosotros</a>
+        <a href="../pages/servicios.html">Servicios</a>
+        <a href="../pages/faqs.html">Preguntas Frecuentes</a>
+        <a href="../pages/contactenos.html">Contáctenos</a>
+    </nav>
     <main>
+        <section id="conocenos" class="main-title"></section>
         <section class="main">
-            <h1 class="main__title">¡Conocenos!</h1>
-            <p class="main__paragraph">Te brindamos la ayuda que necesitas para crecer tu negocio</p>
-            <img src="../img/coderlab3.png" alt="logo coderlab">
+            <img src="../img/coderlab5.png" alt="logo coderlab">
         </section>
         <section class="nosotros">
-            <div class="nosotros__container container">
-                <div>
-                    <h2 class="subtitle-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                    <p class="nosotros__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
-                        aliquam nemo in facere suscipit at delectus unde labore ad officia iste accusantium eaque
-                        aperiam laborum est voluptate totam? Modi, obcaecati Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Excepturi, aliquam nemo in facere suscipit at delectus unde labore ad officia
-                        iste accusantium eaque
-                        aperiam laborum est voluptate totam? Modi, obcaecati?</p>
+            <div class="container">
+                <div class="nosotros-flex">
+                    <div class="nosotros-container">
+                        <h2 class="subtitle-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <p class="nosotros__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi,
+                            aliquam nemo in facere suscipit at delectus unde labore ad officia iste accusantium eaque
+                            aperiam laborum est voluptate totam? Modi, obcaecati Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Excepturi, aliquam nemo in facere suscipit at delectus unde labore ad
+                            officia
+                            iste accusantium eaque
+                            aperiam laborum est voluptate totam? Modi, obcaecati?</p>
+                    </div>
+                    <figure class="nosotros__picture">
+                        <img src="../img/engineering_team.svg" class="nosotros__img" alt="imagen equipo de trabajo">
+                    </figure>
                 </div>
-                <figure class="nosotros__picture">
-                    <img src="../img/engineering_team.svg" class="nosotros__img" alt="imagen equipo de trabajo">
-                </figure>
             </div>
         </section>
         <section class="image-nosotros">
         </section>
         <section class="caracteristicas">
             <div class="container">
-                <h2 class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <p class="caracteristicas__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    consectetur adipisicing elit. consectetur adipisicing elit.</p>
-                <div class="caracteristicas__main">
-                    <article class="caracteristicas__icons">
-                        <img src="../img/shapes.svg" class="caracteristicas__icon" alt="icono nosotros uno">
-                        <h3>Lorem ipsum dolor sit amet.s</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                            tempore porro eius facilis?</p>
-                    </article>
-                    <article class="caracteristicas__icons">
-                        <img src="../img/paint.svg" class="caracteristicas__icon" alt="icono nosotros dos">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                            tempore porro eius facilis?</p>
-                    </article>
-                    <article class="caracteristicas__icons">
-                        <img src="../img/code.svg" class="caracteristicas__icon" alt="icono nosotros tres">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                            tempore porro eius facilis?</p>
-                    </article>
-                    <article class="caracteristicas__icons">
-                        <img src="../img/paint.svg" class="caracteristicas__icon" alt="icono nosotros cuatro">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                            tempore porro eius facilis?</p>
-                    </article>
+                <div class="caracteristicas-flex">
+                    <h2 class="caracteristicas-subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                    <p class="caracteristicas-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        consectetur adipisicing elit. consectetur adipisicing elit.</p>
+                    <div class="caracteristicas-main">
+                        <article class="caracteristicas-icons">
+                            <img src="../img/shapes.svg" class="caracteristicas-icon" alt="icono nosotros uno">
+                            <h3 class="caracteristicas-title">Lorem ipsum dolor sit amet.s</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+                                tempore porro eius facilis?</p>
+                        </article>
+                        <article class="caracteristicas-icons">
+                            <img src="../img/paint.svg" class="caracteristicas-icon" alt="icono nosotros dos">
+                            <h3 class="caracteristicas-title">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+                                tempore porro eius facilis?</p>
+                        </article>
+                        <article class="caracteristicas-icons">
+                            <img src="../img/code.svg" class="caracteristicas-icon" alt="icono nosotros tres">
+                            <h3 class="caracteristicas-title">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+                                tempore porro eius facilis?</p>
+                        </article>
+                        <article class="caracteristicas-icons">
+                            <img src="../img/paint.svg" class="caracteristicas-icon" alt="icono nosotros cuatro">
+                            <h3 class="caracteristicas-title">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+                                tempore porro eius facilis?</p>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="bg-gray info-uno">
-            <div class="info-uno__container container">
-                <figure class="info-uno__picture">
-                    <img src="../img//progressive.svg" class="info-uno__img" alt="imagen dispositivo móvil y notebook">
-                </figure>
-                <div>
-                    <h2 class="info-uno-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-                        corporis!</h2>
-                    <p class="info-uno__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
-                        aliquam nemo in facere suscipit at delectus unde labore ad officia iste accusantium eaque
-                        aperiam laborum est voluptate totam? Modi, obcaecati Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Excepturi, aliquam nemo in facere suscipit at delectus unde labore ad officia
-                        iste accusantium aperiam laborum est voluptate totam? Modi, obcaecati?</p>
-                </div>
-            </div>
-        </section>
-        <section class="portada-tres">
+        <section class="info-nosotros">
             <div class="container">
-                <h2 class="subtitle-portada-tres">Lorem ipsum dolor sit amet consectetur.</h2>
-                <p class="portada-tres__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
+                <div class="info-nosotros-flex">
+                    <figure class="info-nosotros-picture">
+                        <img src="../img//progressive.svg" class="info-nosotros-img"
+                            alt="imagen dispositivo móvil y notebook">
+                    </figure>
+                    <div class="info-nosotros-container">
+                        <h2 class="info-nosotros-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                        <p class="info-nosotros-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi,
+                            aliquam nemo in facere suscipit at delectus unde labore ad officia iste accusantium eaque
+                            aperiam laborum est voluptate totam? Modi, obcaecati Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Excepturi, aliquam nemo in facere suscipit at delectus unde labore ad
+                            officia
+                            iste accusantium aperiam laborum est voluptate totam? Modi, obcaecati?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="nosotros-final">
+            <div class="container">
+                <h2 class="nosotros-final-subtitle">Lorem ipsum dolor sit amet consectetur.</h2>
+                <p class="nosotros-final-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
                     architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
                     eius atque tempora iure ab non autem.</p>
-                <a href="#" class="btn-portada-tres">Lorem, ipsum.</a>
+                <a href="../pages/contactenos.html" class="nosotros-final-button">Lorem, ipsum.</a>
             </div>
         </section>
     </main>
@@ -147,7 +163,7 @@
         <div class="container__footer">
             <div class="box__footer col-3">
                 <div class="logo">
-                    <img src="../img/coderlab1.png" alt="logo coderlab">
+                    <img src="../img/coderlab5.png" alt="logo coderlab">
                 </div>
                 <div class="terms">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero
@@ -182,7 +198,7 @@
             <p>Todos los derechos reservados © 2021 <b>Coderlab</b></p>
         </div>
     </footer>
-    <script src="../js/menu.js"></script>
+    <script src="../js/menuMobile.js"></script>
     <script src="../js/nav-mod.js"></script>
     <script src="https://kit.fontawesome.com/feb95a5faa.js" crossorigin="anonymous"></script>
 </body>

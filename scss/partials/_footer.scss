@@ -1,10 +1,11 @@
 /* NESTING SASS */
 
 footer {
-    width: 100%;
-    padding: 50px 0px;
-    background-image: url(../img/background-footer.svg);
+    background-image: url(../img/footer-2.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover;
+    padding: 50px 0px;
 
     .container__footer {
         display: flex;
@@ -26,32 +27,33 @@ footer {
             & .terms {
                 max-width: 350px;
                 margin-top: 20px;
-                font-weight: 500;
-                color: #7a7a7a;
-                font-size: 18px;
+                //font-weight: 500;
+                color: #fff;
+                font-size: 16px;
             }
 
             & h2 {
-                margin-bottom: 30px;
-                color: #343434;
+                margin-bottom: 15px;
+                color: #fff;
                 font-weight: 600;
-                font-size: 24px;
+                font-size: 21px;
             }
 
             & a {
-                margin-top: 10px;
-                color: #7a7a7a;
-                font-weight: 600;
+                margin-top: 6px;
+                color: #fff;
+                //font-weight: 600;
                 text-decoration: none;
             }
 
             & a:hover {
                 opacity: 0.8;
-                color: #eb5757;
+                color: #c54de2;
             }
 
             & a .fab {
-                font-size: 20px;
+                font-size: 19px;
+                margin-right: 5px;
             }
         }
 
@@ -72,13 +74,13 @@ footer {
 
         & p {
             margin-top: 20px;
-            color: #7a7a7a;
+            color: #fff;
         }
 
         & hr {
             border: none;
             height: 0.5px;
-            background-color: #7a7a7a;
+            background-color: #fff;
         }
     }
 }

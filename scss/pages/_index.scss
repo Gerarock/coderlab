@@ -1,6 +1,6 @@
 /* NESTING SASS */
 
-/* SECCION HERO INDEX */
+/* SECCION BANNER INDEX */
 .fade-in {
     animation: fadeIn 3s;
 
@@ -14,53 +14,60 @@
         }
     }
 
-    .hero {
+    .banner {
         width: 100%;
         height: 100vh;
         min-height: 1000px;
         max-height: 100px;
-        display: grid;
-        grid-template-rows: 100px 1fr;
-        color: #fff;
-        /* fallback for old browsers */
         background: -webkit-linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
-        /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        //clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
         .text-logo {
             color: #eb5757;
         }
 
-        .hero__container {
-            @include flex(column, nowrap, center, center, 1em);
-            padding-bottom: 100px;
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
             padding-top: 25em;
 
-            .hero__title {
-                font-size: 3rem;
-            }
+            .container {
+                padding-left: 120px;
 
-            .hero__paragraph {
-                margin-bottom: 20px;
-            }
+                .banner-title {
+                    font-size: 75px;
+                    font-weight: 800;
+                    line-height: 1.10;
+                    margin-bottom: 35px;
 
-            .btn-hero {
-                display: inline-block;
-                background-color: #eb5757;
-                justify-self: center;
-                color: #fff;
-                text-decoration: none;
-                padding: 13px 30px;
-                border-radius: 32px;
-                box-shadow: 1px 1px 30px -5px #20202049;
-                transition: box-shadow 500ms;
-                font-size: 18px;
-                font-weight: 600;
+                    .banner-title-color {
+                        color: #eb5757;
+                    }
+                }
 
-                &:hover {
-                    box-shadow: 1px 1px 30px -5px #20202085;
+                .banner-paragraph {
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+
+                .banner-button {
+                    display: inline-block;
+                    background-color: #eb5757;
+                    justify-self: center;
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 13px 30px;
+                    border-radius: 32px;
+                    transition: box-shadow 500ms;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 4%;
+
+                    &:hover {
+                        box-shadow: 1px 1px 30px -5px #20202085;
+                    }
                 }
             }
         }
@@ -207,21 +214,29 @@
     }
 }
 
-/* MEDIA QUERYS INDEX
-@media screen and (max-width: 968px) 992
-@media screen and (max-width: 768px) 
-@media screen and (max-width: 576px) 
-*/
+/* MEDIA QUERYS INDEX */
 @media screen and (max-width: 992px) {
-    /*     .fade-in .hero .hero__container .hero__title {
-        font-size: 2rem;
-    } */
+    .fade-in .banner .banner-text .container .banner-title {
+        font-size: 50px;
+        margin-bottom: 22px;
+    }
+
+    .fade-in .banner .banner-text .container .banner-paragraph {
+        font-size: 26px;
+    }
+
+    .fade-in .banner .banner-text .container .banner-button {
+        font-size: 15px;
+    }
+
+    .fade-in .banner .banner-text .container {
+    padding-left: 80px;
+}
 }
 
-@media (max-width:768px) {
-    .fade-in .hero .hero__container {
+@media screen and (max-width: 768px) {
+    .fade-in .banner .banner-text {
         text-align: center;
-        padding-bottom: 150px;
     }
 
     .fade-in .portada-uno .container .portada-uno-flex {
@@ -262,7 +277,7 @@
 }
 
 @media screen and (max-width: 576px) {
-    .fade-in .hero {
+    .fade-in .banner {
         background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
         background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
     }
@@ -270,10 +285,6 @@
     .fade-in .arrow {
         background: #d25564;
         height: 50px;
-    }
-
-    .fade-in .hero .hero__container {
-        padding-bottom: 20em;
     }
 
     .fade-in .portada-dos .container .portada-dos-flex .portada-dos__main {

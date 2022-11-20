@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1440 1024" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<clipPath id="TextBounds">
+<rect height="60" width="60" x="130" y="30"/>
+</clipPath>
+<clipPath id="TextBounds_2">
+<rect height="60" width="60" x="80" y="30"/>
+</clipPath>
+<clipPath id="TextBounds_3">
+<rect height="60" width="60" x="30" y="30.0042"/>
+</clipPath>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="1024" width="1440" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Capa-1" vectornator:layerName="Capa 1">
+<path d="M-111.041-111.427L1548.66-111.427L1548.66 1136.3L-111.041 1136.3L-111.041-111.427Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="220"/>
+<path clip-path="url(#TextBounds)" d="M148.492 62.7793C156.373 62.7793 162.848 56.3047 162.848 48.4238C162.848 40.5283 156.373 34.0537 148.478 34.0537C140.597 34.0537 134.122 40.5283 134.122 48.4238C134.122 56.3047 140.597 62.7793 148.492 62.7793Z" fill="#28ca42" opacity="1" stroke="none"/>
+<path clip-path="url(#TextBounds_2)" d="M98.4922 62.7793C106.373 62.7793 112.848 56.3047 112.848 48.4238C112.848 40.5283 106.373 34.0537 98.4775 34.0537C90.5967 34.0537 84.1221 40.5283 84.1221 48.4238C84.1221 56.3047 90.5967 62.7793 98.4922 62.7793Z" fill="#ffbf2c" opacity="1" stroke="none"/>
+<path clip-path="url(#TextBounds_3)" d="M48.4922 62.7835C56.373 62.7835 62.8477 56.3089 62.8477 48.4281C62.8477 40.5326 56.373 34.0579 48.4775 34.0579C40.5967 34.0579 34.1221 40.5326 34.1221 48.4281C34.1221 56.3089 40.5967 62.7835 48.4922 62.7835Z" fill="#ff6058" opacity="1" stroke="none"/>
+</g>
+</svg>

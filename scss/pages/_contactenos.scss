@@ -18,7 +18,7 @@
       background-color: #f7f7f8;
    }
 
-   .hero-contactenos {
+   .banner-contactenos {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -26,150 +26,152 @@
       .text-logo {
          color: #eb5757;
       }
-   }
 
-   /* seccion formulario */
-   .section-contact {
-      min-height: 100vh;
-      padding-top: 60px;
-      //background: #f7f7f8;
-      background-image: linear-gradient(-7deg, #f7f7f8 43%, #910e60 40%, #382458);
+      /* seccion formulario */
+      .section-contact {
+         min-height: 100vh;
+         padding-top: 60px;
+         background-image: linear-gradient(-7deg, #f7f7f8 43%, #910e60 40%, #382458);
 
-      .container {
-         max-width: 1280px;
-         margin: 0 auto;
-         padding-left: 32px;
-         padding-right: 32px;
+         .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 120px;
+            padding-bottom: 120px;
 
-/*          @media (min-width: 768px) {
-            padding-left: 64px;
-            padding-right: 64px;
-         }
+            /*          @media (max-width: 768px) {
+         padding-left: 64px;
+         padding-right: 64px;
+      }
 
-         @media (min-width: 1024px) {
-            padding-left: 128px;
-            padding-right: 128px;
-         } */
+      @media (max-width: 1024px) {
+         padding-left: 128px;
+         padding-right: 128px;
+      } */
 
-         h1 {
-            color: #fff;
-            font-size: 36px;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 30px;
-         }
-
-         p {
-            color: #fff;
-            font-size: 18px;
-            line-height: 1.5;
-            margin-bottom: 50px;
-         }
-
-         form {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 16px;
-            background-color: #FFF;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-
-/*             @media (min-width: 768px) {
-               grid-template-columns: repeat(2, 1fr);
-            } */
-
-            .form-group {
-               &.full {
-                  grid-column: 1 / -1;
-               }
-
-               & label {
-                  display: block;
-                  margin-bottom: 6px;
-                  margin-top: 3px;
-                  color: #888;
-                  font-size: 14px;
-               }
-
-               & input, textarea, select {
-                  appearance: none;
-                  outline: none;
-                  border: none;
-                  display: block;
-                  width: 100%;
-                  border-radius: 8px;
-                  padding: 12px 16px;
-                  background-color: #eff3f5;
-                  color: #757575;
-                  transition: 0.6s;
-
-                  &:focus {
-                     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
-                     background-color: #FFF;
-                  }
-               }
-
-               & textarea {
-                  resize: none;
-                  min-height: 150px;
-               }
-
-               & .error-text {
-                  color: #ca3434;
-                  visibility: hidden;
-               }
-
-               &.form-error input {
-                  border-bottom: 2px solid #eb5757;
-               }
-
-               &.form-error .error-text {
-                  visibility: visible;
-               }
-
-               &.form-success input {
-                  border-bottom: 2px solid #1e9ba3;
-                }
-
-               select {
-                  background-image: url(../img/flecha.png);
-                  background-repeat: no-repeat;
-                  background-position: right center;
-               }
+            h1 {
+               color: #fff;
+               font-size: 36px;
+               text-transform: uppercase;
+               text-align: center;
+               margin-bottom: 30px;
             }
 
-            .submit-group {
-               grid-column: 1 / -1;
-               text-align: left;
+            p {
+               color: #fff;
+               font-size: 18px;
+               line-height: 1.5;
+               margin-bottom: 50px;
+            }
 
-                & button {
-                  appearance: none;
-                  border: none;
-                  outline: none;
-                  background: none;
-                  padding: 13px 35px;
-                  /* background-color: #eb5757; */
-                  background: linear-gradient(to right, rgb(255, 0, 106), rgb(255, 67, 61));
-                  border-radius: 8px;
-                  color: #FFF;
-                  cursor: pointer;
-                  transition: 0.6s;
-                  margin-top: 5px;
-                  width: 15%;
+            form {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-gap: 16px;
+               background-color: #FFF;
+               padding: 32px;
+               border-radius: 16px;
+               box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 
-                  &:hover {
-                     background-color: #e99d15;
-                     box-shadow: 1px 1px 30px -5px #20202049;
+               @media (max-width: 768px) {
+                  grid-template-columns: 1fr;
+               }
+
+               .form-group {
+                  &.full {
+                     grid-column: 1 / -1;
                   }
 
-                  &:disabled {
-                     background: #82a0a2;
-                     border: 1px solid #82a0a2;
-                     color: lightgray;
-                   }
-                }
+                  & label {
+                     display: block;
+                     margin-top: 3px;
+                     color: #888;
+                     font-size: 14px;
+                  }
 
+                  & input,
+                  textarea,
+                  select {
+                     appearance: none;
+                     outline: none;
+                     border: none;
+                     display: block;
+                     width: 100%;
+                     border-radius: 8px;
+                     padding: 12px 16px;
+                     background-color: #eff3f5;
+                     color: #757575;
+                     transition: 0.6s;
+
+                     &:focus {
+                        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+                        background-color: #FFF;
+                     }
+                  }
+
+                  & textarea {
+                     resize: none;
+                     min-height: 150px;
+                  }
+
+                  & .error-text {
+                     color: #ca3434;
+                     visibility: hidden;
+                  }
+
+                  &.form-error input {
+                     border-bottom: 2px solid #eb5757;
+                  }
+
+                  &.form-error .error-text {
+                     visibility: visible;
+                  }
+
+                  &.form-success input {
+                     border-bottom: 2px solid #1e9ba3;
+                  }
+
+                  select {
+                     background-image: url(../img/flecha.png);
+                     background-repeat: no-repeat;
+                     background-position: right center;
+                  }
+               }
+
+               .submit-group {
+                  grid-column: 1 / -1;
+                  text-align: left;
+
+                  & button {
+                     appearance: none;
+                     border: none;
+                     outline: none;
+                     background: none;
+                     padding: 13px 35px;
+                     /* background-color: #eb5757; */
+                     background: linear-gradient(to right, rgb(255, 0, 106), rgb(255, 67, 61));
+                     border-radius: 8px;
+                     color: #FFF;
+                     cursor: pointer;
+                     transition: 0.6s;
+                     margin-top: 5px;
+                     width: 20%;
+
+                     &:hover {
+                        background-color: #e99d15;
+                        box-shadow: 1px 1px 30px -5px #20202049;
+                     }
+
+                     &:disabled {
+                        background: #eef3f5;
+                        border: 1px solid #eef3f5;
+                        color: #d6d6d6;
+                     }
+                  }
+
+               }
             }
          }
       }

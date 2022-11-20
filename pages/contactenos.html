@@ -11,12 +11,11 @@
         content="Servicios integrales de informática, contactános para transfomar digitalmente tus ideas.">
     <title>Coderlab | Contáctenos</title>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class="fade-in">
-    <header class="hero-contactenos">
+    <header class="banner-contactenos">
         <nav>
             <div class="main-logo">
                 <a href="../index.html" class="logo">&lt;Coder<span class="text-logo">lab/></span></a>
@@ -37,11 +36,10 @@
                 <li>
                     <a href="#" class="contactenos">CONTÁCTENOS</a>
                 </li>
-                <img src="../img/close.svg" class="nav__close" alt="botón cerrar menú hamburguesa">
             </ul>
-            <div class="nav__menu">
-                <img src="../img/menu.svg" class="nav__img" alt="botón abrir menú hamburguesa">
-            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
         </nav>
         <section class="section-contact">
             <div class="container">
@@ -97,11 +95,18 @@
             </div>
         </section>
     </header>
+    <nav class="mobile-nav">
+        <a href="../index.html" class="select-mobile">Inicio</a>
+        <a href="../pages/nosotros.html">Nosotros</a>
+        <a href="../pages/servicios.html">Servicios</a>
+        <a href="../pages/faqs.html">Preguntas Frecuentes</a>
+        <a href="../pages/contactenos.html">Contáctenos</a>
+    </nav>
     <footer class="footer bg-color">
         <div class="container__footer">
             <div class="box__footer col-3">
                 <div class="logo">
-                    <img src="../img/coderlab1.png" alt="logo coderlab">
+                    <img src="../img/coderlab5.png" alt="logo coderlab">
                 </div>
                 <div class="terms">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero
@@ -138,7 +143,6 @@
         </div>
     </footer>
     <script defer src="../js/form.js"></script>
-    <script src="../js/menu.js"></script>
     <script src="../js/nav-mod.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/feb95a5faa.js" crossorigin="anonymous"></script>

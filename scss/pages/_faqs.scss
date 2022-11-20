@@ -16,11 +16,11 @@
 
     .banner-faqs {
         width: 100%;
-        height: 70vh;
+        height: 30vh;
         min-height: 100px;
         max-height: 1000px;
         position: relative;
-        background: #f7f7f8;
+
         //background-image: url(../../img/banner-faqs-uno.svg);
         //background: linear-gradient(45deg, #eb5757, #7462ff, #f48e21, #23d5ab);
         //animation: color 9s ease-in-out infinite;
@@ -33,31 +33,18 @@
         //background-attachment: fixed;
         //clip-path: polygon(-280% 0%, 100% 0%, 100% 85%, 50% 100%);
         /*         background-image: url(../../img/banner-faqs-uno.svg);
-        background-position: center top;*/
+        background-position: center top;
         background-repeat: no-repeat;
-        background-size: cover; 
-        background: rgb(249, 86, 179);
-        background: linear-gradient(90deg, rgba(249, 86, 179, 1) 0%, rgba(236, 120, 36, 1) 100%);
+        background-size: cover; */
+        background-color: #653694;
 
-        .custom-shape-divider-bottom-1668955137 {
+        .arrow-banner-down {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             overflow: hidden;
             line-height: 0;
-            transform: rotate(180deg);
-
-            &.custom-shape-divider-bottom-1668955137 svg {
-                position: relative;
-                display: block;
-                width: calc(100% + 1.3px);
-                height: 150px;
-            }
-
-            .custom-shape-divider-bottom-1668955137 .shape-fill {
-                fill: #FFFFFF;
-            }
         }
     }
 
@@ -68,13 +55,16 @@
 
 /* seccion categorias */
 .preguntas-frecuentes {
-    background: #f7f7f8;
+    background: #fff;
 
     .container {
         padding-left: 120px;
         padding-right: 120px;
-        padding-top: 8em;
-        padding-bottom: 14em;
+        padding-top: 5em;
+        padding-bottom: 9em;
+        background-image: url(../../img/bg-tecnologias.svg);
+        background-position: center top;
+        background-repeat: repeat;
 
         /*         .titulo {
             color: #3a3a3a;
@@ -83,27 +73,35 @@
             margin: 20px 0 70px 0;
         } */
 
+        .separador-faq {
+            border-right: 0.2pc solid #eb5757;
+            margin: 0 0 25px 0px;
+            padding-right: 10px;
+        }
+
         .titulo-faqs {
             color: #3a3a3a;
             font-weight: 700;
-            text-align: left;
-            margin: 0 0 20px 0;
+            text-align: right;
+            margin: 0 30px 27px 0;
         }
 
         .paragraph-faqs {
-            margin: 0 70px 60px 0;
+            text-align: right;
+            margin: 0 30px 60px 0;
         }
 
         .categorias {
-            display: flex;
-            flex-direction: row;
+/*             display: flex;
+            flex-direction: row; */
             gap: 20px;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
+            padding-left: 10px;
 
             .categoria {
                 cursor: pointer;
                 text-align: center;
-                padding: 12px 20px 12px 20px;
+                padding: 14px 20px 14px 20px;
                 border-radius: 15px;
                 color: #a2a2a2;
                 background: #eff3f5;
@@ -132,6 +130,7 @@
         /* seccion preguntas */
         .preguntas {
             margin-right: 12em;
+            padding-left: 10px;
 
             .contenedor-preguntas {
                 display: none;
@@ -147,13 +146,14 @@
                     }
 
                     .pregunta {
-                        @include flex(row, nowrap, space-between, center, 0);
+                        //@include flex(row, nowrap, space-between, center, 0);
                         font-weight: 700;
                         font-size: 18px;
                         line-height: 15px;
 
                         & img {
-                            width: 14px;
+                            width: 15px;
+                            margin-right: 15px;
                         }
                     }
 
@@ -173,7 +173,7 @@
                     &.activa .respuesta {
                         opacity: 2;
                         margin-bottom: 30px;
-                        margin-left: 1em;
+                        margin-left: 2em;
                         text-align: left;
                     }
 
@@ -198,7 +198,7 @@
 }
 
 .color-bg {
-    background-color: #f7f7f8;
+    background-color: #fff;
 }
 
 

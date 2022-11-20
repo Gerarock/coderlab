@@ -17,8 +17,8 @@
     .banner {
         width: 100%;
         height: 100vh;
-        min-height: 1000px;
-        max-height: 100px;
+/*         min-height: 1000px;
+        max-height: 100px; */
         background: -webkit-linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
         background: linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
 
@@ -30,7 +30,7 @@
             display: flex;
             flex-direction: column;
             color: #fff;
-            padding-top: 25em;
+            padding-top: 20em;
 
             .container {
                 padding-left: 120px;
@@ -73,10 +73,20 @@
         }
     }
 
-    .arrow {
+/*     .arrow {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(50% + 50.00px) calc(100% - 50px), 50% 100%, calc(50% - 50.00px) calc(100% - 50px), 0 calc(100% - 50px));
         background: #cc283b;
         height: 50px;
+    } */
+
+    .wave-banner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
     }
 
     /* SECCION PORTADA UNO INDEX */

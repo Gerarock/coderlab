@@ -314,35 +314,23 @@ body {
 }
 .fade-in .banner-faqs {
   width: 100%;
-  height: 70vh;
+  height: 30vh;
   min-height: 100px;
   max-height: 1000px;
   position: relative;
-  background: #f7f7f8;
   /*         background-image: url(../../img/banner-faqs-uno.svg);
-  background-position: center top;*/
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
-  background: rgb(249, 86, 179);
-  background: linear-gradient(90deg, rgb(249, 86, 179) 0%, rgb(236, 120, 36) 100%);
+  background-size: cover; */
+  background-color: #653694;
 }
-.fade-in .banner-faqs .custom-shape-divider-bottom-1668955137 {
+.fade-in .banner-faqs .arrow-banner-down {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
-}
-.fade-in .banner-faqs .custom-shape-divider-bottom-1668955137.custom-shape-divider-bottom-1668955137 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-.fade-in .banner-faqs .custom-shape-divider-bottom-1668955137 .custom-shape-divider-bottom-1668955137 .shape-fill {
-  fill: #FFFFFF;
 }
 .fade-in .text-logo {
   color: #eb5757;
@@ -350,13 +338,16 @@ body {
 
 /* seccion categorias */
 .preguntas-frecuentes {
-  background: #f7f7f8;
+  background: #fff;
 }
 .preguntas-frecuentes .container {
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 8em;
-  padding-bottom: 14em;
+  padding-top: 5em;
+  padding-bottom: 9em;
+  background-image: url(../../img/bg-tecnologias.svg);
+  background-position: center top;
+  background-repeat: repeat;
   /*         .titulo {
       color: #3a3a3a;
       font-weight: 700;
@@ -365,25 +356,32 @@ body {
   } */
   /* seccion preguntas */
 }
+.preguntas-frecuentes .container .separador-faq {
+  border-right: 0.2pc solid #eb5757;
+  margin: 0 0 25px 0px;
+  padding-right: 10px;
+}
 .preguntas-frecuentes .container .titulo-faqs {
   color: #3a3a3a;
   font-weight: 700;
-  text-align: left;
-  margin: 0 0 20px 0;
+  text-align: right;
+  margin: 0 30px 27px 0;
 }
 .preguntas-frecuentes .container .paragraph-faqs {
-  margin: 0 70px 60px 0;
+  text-align: right;
+  margin: 0 30px 60px 0;
 }
 .preguntas-frecuentes .container .categorias {
-  display: flex;
-  flex-direction: row;
+  /*             display: flex;
+              flex-direction: row; */
   gap: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
+  padding-left: 10px;
 }
 .preguntas-frecuentes .container .categorias .categoria {
   cursor: pointer;
   text-align: center;
-  padding: 12px 20px 12px 20px;
+  padding: 14px 20px 14px 20px;
   border-radius: 15px;
   color: #a2a2a2;
   background: #eff3f5;
@@ -405,6 +403,7 @@ body {
 }
 .preguntas-frecuentes .container .preguntas {
   margin-right: 12em;
+  padding-left: 10px;
 }
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas {
   display: none;
@@ -419,18 +418,13 @@ body {
   color: #ff375f;
 }
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .pregunta {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 15px;
 }
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .pregunta img {
-  width: 14px;
+  width: 15px;
+  margin-right: 15px;
 }
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .paragraph {
   margin-top: 0;
@@ -446,7 +440,7 @@ body {
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta.activa .respuesta {
   opacity: 2;
   margin-bottom: 30px;
-  margin-left: 1em;
+  margin-left: 2em;
   text-align: left;
 }
 .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta.activa img {
@@ -463,7 +457,7 @@ body {
 }
 
 .color-bg {
-  background-color: #f7f7f8;
+  background-color: #fff;
 }
 
 /* Responsive Design */
@@ -565,6 +559,11 @@ body {
 /* SECCION BANNER INDEX */
 .fade-in {
   animation: fadeIn 3s;
+  /*     .arrow {
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(50% + 50.00px) calc(100% - 50px), 50% 100%, calc(50% - 50.00px) calc(100% - 50px), 0 calc(100% - 50px));
+          background: #cc283b;
+          height: 50px;
+      } */
   /* SECCION PORTADA UNO INDEX */
   /* SECCION PORTADA DOS INDEX */
   /* SECCION PORTADA TRES INDEX */
@@ -580,8 +579,8 @@ body {
 .fade-in .banner {
   width: 100%;
   height: 100vh;
-  min-height: 1000px;
-  max-height: 100px;
+  /*         min-height: 1000px;
+          max-height: 100px; */
   background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
   background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
 }
@@ -592,7 +591,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding-top: 25em;
+  padding-top: 20em;
 }
 .fade-in .banner .banner-text .container {
   padding-left: 120px;
@@ -627,10 +626,14 @@ body {
 .fade-in .banner .banner-text .container .banner-button:hover {
   box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.5215686275);
 }
-.fade-in .arrow {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(50% + 50px) calc(100% - 50px), 50% 100%, calc(50% - 50px) calc(100% - 50px), 0 calc(100% - 50px));
-  background: #cc283b;
-  height: 50px;
+.fade-in .wave-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 .fade-in .portada-uno {
   background-color: #fff;

@@ -49,8 +49,8 @@
                     background-attachment: fixed;
                     background-repeat: no-repeat;
                     background-image: url("../img/Asset-3.svg");
-                    padding: 1.618em 6.472em 50em 50%;
-                    background-position: 100px 75%;
+                    padding: 1.618em 0em 50em 50%;
+                    background-position: 20px 75%;
 
                     .smallscreen {
                         display: none;
@@ -62,15 +62,16 @@
                     }
 
                     .title-servicios-info {
-                        font-size: 3.5em;
+                        font-size: 45px;
                         margin-top: 2em;
-                        font-weight: bold;
+                        font-weight: 700;
                         color: #fff;
                     }
 
                     .paragraph-servicios-info {
-                        font-size: 1.4em;
-                        margin-top: 2em;
+                        font-size: 25px;
+                        font-weight: 400;
+                        margin-top: 1em;
                         color: #fff;
                     }
                 }
@@ -81,7 +82,7 @@
     /* SECCION HERO SERVICIOS */
     .hero-servicios {
         width: 100%;
-        height: 90vh;
+        height: 800px;
         background: url(../img/bg-01.svg);
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -105,7 +106,7 @@
                     color: #fff;
                     width: 50%;
                     font-size: 50px;
-                    font-weight: 700;
+                    font-weight: 600;
                     margin-bottom: 20px;
                 }
 
@@ -434,7 +435,7 @@
         text-align: center;
 
         .container {
-            padding-top: 160px;
+            padding-top: 150px;
             padding-bottom: 150px;
 
             .subtitle-info-dos {
@@ -447,7 +448,7 @@
             .text-info-dos {
                 width: 60%;
                 margin: 0 auto;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
             }
 
             .btn-info-dos {
@@ -472,13 +473,25 @@
 }
 
 
-/* media queries 
-@media screen and (max-width: 992px)
-@media screen and (max-width: 768px) 
-@media screen and (max-width: 576px) 
-*/
+/* MEDIA QUERYS */
 @media screen and (max-width: 1200px) {
     .tecnologias .container .tecnologias-grid {
+        animation: logoMove 20s linear infinite;
+    }
+
+    .fade-in .servicios .container .servicios-flex aside {
+        min-width: 30%;
+    }
+
+    .fade-in .servicios .container .servicios-flex aside .titulo {
+        font-size: 1.5em;
+    }
+
+    .fade-in .hero-servicios .banner-servicios-text .container .banner-servicios-title {
+        font-size: 45px;
+    }
+
+    .fade-in .tecnologias .container .tecnologias-grid {
         animation: logoMove 20s linear infinite;
     }
 }
@@ -496,14 +509,14 @@
     }
 
     .fade-in .servicios-info .container .servicio-info-flex .content .title-servicios-info {
-        font-size: 3em;
-        margin-top: 0em;
-        text-align: center;
+        font-size: 35px;
+        margin-top: 4em;
+        text-align: left;
     }
 
     .fade-in .servicios-info .container .servicio-info-flex .content .paragraph-servicios-info {
         font-size: 1.3em;
-        text-align: center;
+        text-align: left;
     }
 
     .servicios .container .servicios-flex aside {
@@ -520,75 +533,101 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .cover-top .container .title-servicios .title-servicios__paragraph {
+@media screen and (max-width: 767px) {
+    .fade-in .servicios-info .container .servicio-info-flex .content {
+        background-image: none;
+        padding: 3em 0 50em 0;
+    }
+
+    .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen {
+        display: block;
+    }
+
+    .fade-in .servicios-info .container .servicio-info-flex .content .title-servicios-info {
+        margin-top: 1em;
         text-align: center;
     }
 
-    .servicios-uno .container .servicios-uno-picture .servicios-uno-img {
+    .fade-in .servicios-info .container .servicio-info-flex .content .paragraph-servicios-info {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .fade-in .servicios-uno .container .servicios-uno-picture .servicios-uno-img {
         width: 30%;
     }
 
-    .cover-top .container {
-        padding-top: 140px;
-        padding-bottom: 110px;
-    }
-
-    .servicios-uno .container .servicios-uno-picture {
-        text-align: center;
-        margin-bottom: 4em;
-    }
-
-    .servicios-dos .container .servicios-dos-picture .servicios-dos-img {
+    .fade-in .servicios-dos .container .servicios-dos-picture .servicios-dos-img {
         width: 40%;
     }
 
-    .servicios-dos .container {
-        padding-bottom: 130px;
+    .fade-in .servicios .container .servicios-flex {
+        flex-direction: column;
+
+    }
+
+    .fade-in .servicios .container .servicios-flex .box-flex {
+        margin-left: 0;
+    }
+
+    .fade-in .servicios .container .servicios-flex aside .titulo {
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 1em;
+        border-style: none;
+        text-transform: uppercase;
+    }
+
+    .fade-in .servicios .container .servicios-flex aside .titulo {
+        padding: 10px 0px 10px 0px;
+    }
+
+    .fade-in .tecnologias {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .fade-in .servicios-uno .container .servicios-uno-picture {
+        margin-bottom: 4em;
     }
 }
 
-
-
-
-
-
-/* 
-@media (max-width: 992px) {
+@media (max-width: 575px) {
     .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen {
         display: block;
     }
 
-    .fade-in .servicios-info .container .servicio-info-flex .content {
-        padding: 1.618em 3.236em;
-        background-image: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .bg-info-uno .info-uno-picture {
-        width: 60%;
-        padding-bottom: 13%;
-        margin: auto;
-        display: block;
+    .fade-in .hero-servicios .banner-servicios-text .container .banner-servicios-title {
+        font-size: 30px;
     }
 
-    .bg-info-uno {
+    .fade-in .hero-servicios .banner-servicios-text .container .banner-servicios-paragraph {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .fade-in .hero-servicios .banner-servicios-text .container .banner-servicios-title {
+        width: 100%;
+    }
+
+    .fade-in .cover-top .container .title-servicios .title-servicios__paragraph {
         text-align: center;
     }
 
-    .bg-info-uno .subtitle-info-uno::before {
-        position: initial;
+    .fade-in .servicios-uno .container .servicios-uno-picture .servicios-uno-img {
+        width: 50%;
+    }
+
+    .fade-in .servicios-dos .container .servicios-dos-picture .servicios-dos-img {
+        width: 70%;
+    }
+
+    .fade-in .servicios .container .servicios-flex aside .titulo {
+        font-size: 2em;
+    }
+
+    .fade-in .tecnologias .container .tecnologias-grid {
+        animation: logoMove 10s linear infinite;
     }
 }
-
-@media screen and (max-width: 576px) {
-    .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen {
-        display: block;
-    }
-
-    .fade-in .servicios-info .container .servicio-info-flex .content {
-        padding: 1.618em 3.236em;
-        background-image: none;
-    }
-} */

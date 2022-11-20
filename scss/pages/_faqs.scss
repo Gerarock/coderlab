@@ -16,7 +16,7 @@
 
     .banner-faqs {
         width: 100%;
-        height: 13vh;
+        height: 70vh;
         min-height: 100px;
         max-height: 1000px;
         position: relative;
@@ -33,9 +33,32 @@
         //background-attachment: fixed;
         //clip-path: polygon(-280% 0%, 100% 0%, 100% 85%, 50% 100%);
         /*         background-image: url(../../img/banner-faqs-uno.svg);
-        background-position: center top;
+        background-position: center top;*/
         background-repeat: no-repeat;
-        background-size: cover; */
+        background-size: cover; 
+        background: rgb(249, 86, 179);
+        background: linear-gradient(90deg, rgba(249, 86, 179, 1) 0%, rgba(236, 120, 36, 1) 100%);
+
+        .custom-shape-divider-bottom-1668955137 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+
+            &.custom-shape-divider-bottom-1668955137 svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .custom-shape-divider-bottom-1668955137 .shape-fill {
+                fill: #FFFFFF;
+            }
+        }
     }
 
     .text-logo {

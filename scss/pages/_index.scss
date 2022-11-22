@@ -17,7 +17,7 @@
     .banner {
         width: 100%;
         height: 100vh;
-/*         min-height: 1000px;
+        /*         min-height: 1000px;
         max-height: 100px; */
         background: -webkit-linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
         background: linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
@@ -30,16 +30,17 @@
             display: flex;
             flex-direction: column;
             color: #fff;
-            padding-top: 20em;
+            padding-top: 15em;
 
             .container {
                 padding-left: 120px;
 
                 .banner-title {
-                    font-size: 75px;
-                    font-weight: 800;
+                    font-size: 80px;
+                    font-weight: 900;
                     line-height: 1.10;
                     margin-bottom: 35px;
+                    font-family: Montserrat, sans-serif;
 
                     .banner-title-color {
                         color: #eb5757;
@@ -73,7 +74,7 @@
         }
     }
 
-/*     .arrow {
+    /*     .arrow {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(50% + 50.00px) calc(100% - 50px), 50% 100%, calc(50% - 50.00px) calc(100% - 50px), 0 calc(100% - 50px));
         background: #cc283b;
         height: 50px;
@@ -227,12 +228,14 @@
 /* MEDIA QUERYS INDEX */
 @media screen and (max-width: 992px) {
     .fade-in .banner .banner-text .container .banner-title {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 22px;
+        text-align: left;
     }
 
     .fade-in .banner .banner-text .container .banner-paragraph {
-        font-size: 26px;
+        font-size: 20px;
+        text-align: left;
     }
 
     .fade-in .banner .banner-text .container .banner-button {
@@ -240,8 +243,8 @@
     }
 
     .fade-in .banner .banner-text .container {
-    padding-left: 80px;
-}
+        padding-left: 80px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -310,4 +313,11 @@
         margin-bottom: 45px;
     }
 
+    .fade-in .banner .banner-text .container .banner-button {
+        font-size: 14px;
+    }
+
+    .fade-in .banner .banner-text {
+        text-align: left;
+    }
 }

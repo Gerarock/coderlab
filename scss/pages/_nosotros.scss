@@ -17,8 +17,6 @@
     .banner-nosotros {
         width: 100%;
         height: 100vh;
-        min-height: 1100px;
-        max-height: 100px;
         position: relative;
         color: #fff;
         background-image: url(../img/banner-nosotros-circle.svg);
@@ -611,7 +609,7 @@
     }
 
     .fade-in .banner-nosotros .banner-nosotros-text {
-        padding-top: 23em;
+        padding-top: 15em;
     }
 
     .fade-in .banner-nosotros .banner-nosotros-text .container .banner-nosotros-paragraph {

@@ -534,6 +534,22 @@
 }
 
 @media screen and (max-width: 767px) {
+    .fade-in .info-dos .container .text-info-dos {
+        width: 90%;
+    }
+
+    .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen img {
+        max-width: 0%;
+    }
+
+    .fade-in .servicios-dos .container {
+        padding-top: 80px;
+    }
+
+    .fade-in .servicios-dos .container .servicios-dos-text {
+        margin-bottom: 60px;
+    }
+
     .fade-in .servicios-info .container .servicio-info-flex .content {
         background-image: none;
         padding: 3em 0 50em 0;
@@ -593,6 +609,22 @@
 }
 
 @media (max-width: 575px) {
+    .fade-in .info-dos .container .text-info-dos {
+        width: 90%;
+    }
+
+    .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen img {
+        max-width: 0%;
+    }
+
+    .fade-in .servicios-dos .container {
+        padding-top: 80px;
+    }
+
+    .fade-in .servicios-dos .container .servicios-dos-text {
+        margin-bottom: 60px;
+    }
+
     .fade-in .servicios-info .container .servicio-info-flex .content .smallscreen {
         display: block;
     }
@@ -620,7 +652,7 @@
     }
 
     .fade-in .servicios-dos .container .servicios-dos-picture .servicios-dos-img {
-        width: 70%;
+        width: 60%;
     }
 
     .fade-in .servicios .container .servicios-flex aside .titulo {

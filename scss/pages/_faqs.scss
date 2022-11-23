@@ -16,7 +16,7 @@
 
     .banner-faqs {
         width: 100%;
-        height: 30vh;
+        height: 200px;
         min-height: 100px;
         max-height: 1000px;
         position: relative;
@@ -220,7 +220,7 @@
     }
 
     .fade-in .banner-faqs {
-        height: 40vh;
+        height: 200px;
     }
 
     .preguntas-frecuentes .container .titulo-faqs {
@@ -243,7 +243,7 @@
 
 @media screen and (max-width: 768px) {
     .fade-in .banner-faqs {
-        height: 20vh;
+        height: 200px;
     }
 
     .flex-row {
@@ -282,8 +282,8 @@
 
 @media screen and (max-width: 576px) {
     .preguntas-frecuentes .container {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .preguntas-frecuentes .container .separador-faq {
@@ -300,5 +300,10 @@
 
     .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta {
         margin-bottom: 3em;
+    }
+
+    .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .pregunta img {
+        width: 10px;
+        margin-right: 4px;
     }
 }

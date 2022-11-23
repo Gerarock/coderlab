@@ -326,7 +326,7 @@ body {
 }
 .fade-in .banner-faqs {
   width: 100%;
-  height: 30vh;
+  height: 200px;
   min-height: 100px;
   max-height: 1000px;
   position: relative;
@@ -487,7 +487,7 @@ body {
     padding-bottom: 6em;
   }
   .fade-in .banner-faqs {
-    height: 40vh;
+    height: 200px;
   }
   .preguntas-frecuentes .container .titulo-faqs {
     font-size: 35px;
@@ -506,7 +506,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .fade-in .banner-faqs {
-    height: 20vh;
+    height: 200px;
   }
   .flex-row {
     flex-direction: column !important;
@@ -537,8 +537,8 @@ body {
 }
 @media screen and (max-width: 576px) {
   .preguntas-frecuentes .container {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .preguntas-frecuentes .container .separador-faq {
     margin: 0 0 50px 0;
@@ -551,6 +551,10 @@ body {
   }
   .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta {
     margin-bottom: 3em;
+  }
+  .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .pregunta img {
+    width: 10px;
+    margin-right: 4px;
   }
 }
 /* NESTING SASS */
@@ -1537,7 +1541,7 @@ body {
 .fade-in .hero-servicios .banner-servicios-text .container .banner-servicios-title {
   text-transform: uppercase;
   color: #fff;
-  width: 50%;
+  width: 80%;
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -1972,7 +1976,7 @@ body {
     width: 60%;
   }
   .fade-in .servicios .container .servicios-flex aside .titulo {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   .fade-in .tecnologias .container .tecnologias-grid {
     animation: logoMove 10s linear infinite;

@@ -34,6 +34,7 @@
 
             .container {
                 padding-left: 120px;
+                height: 100vh;
 
                 .banner-title {
                     font-size: 80px;
@@ -228,7 +229,7 @@
 /* MEDIA QUERYS INDEX */
 @media screen and (max-width: 992px) {
     .fade-in .banner .banner-text .container .banner-title {
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 22px;
         text-align: left;
     }
@@ -243,7 +244,7 @@
     }
 
     .fade-in .banner .banner-text .container {
-        padding-left: 80px;
+        padding-left: 50px;
     }
 }
 

@@ -685,7 +685,6 @@ body {
 }
 .fade-in .banner .banner-text .container {
   padding-left: 120px;
-  height: 100vh;
 }
 .fade-in .banner .banner-text .container .banner-title {
   font-size: 80px;
@@ -720,7 +719,7 @@ body {
 }
 .fade-in .wave-banner {
   position: absolute;
-  bottom: 0;
+  bottom: -1;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -855,7 +854,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .fade-in .banner .banner-text {
-    text-align: center;
+    text-align: left;
   }
   .fade-in .portada-uno .container .portada-uno-flex {
     display: flex;
@@ -870,10 +869,10 @@ body {
     width: 100%;
   }
   .fade-in .portada-uno .subtitle-portada-uno {
-    text-align: center;
+    text-align: left;
   }
   .fade-in .portada-uno .portada-uno__paragraph {
-    text-align: center;
+    text-align: left;
   }
   .fade-in .portada-uno .container .portada-uno-flex .pt-4 .subtitle-portada-uno::before {
     position: unset;

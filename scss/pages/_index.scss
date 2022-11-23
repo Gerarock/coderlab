@@ -16,11 +16,8 @@
 
     .banner {
         width: 100%;
-        height: 100vh;
-        min-height: 1100px;
+        min-height: 900px;
         max-height: 100px;
-        /*         min-height: 1000px;
-        max-height: 100px; */
         background: -webkit-linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
         background: linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
 
@@ -28,49 +25,47 @@
             color: #eb5757;
         }
 
-        .banner-text {
+        .text-flex {
             display: flex;
             flex-direction: column;
-            color: #fff;
-            padding-top: 15em;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            min-height: 100vh;
 
-            .container {
-                padding-left: 120px;
+            .text {
+                font-size: 45px;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #fff;
+                font-family: Montserrat, sans-serif;
 
-                .banner-title {
-                    font-size: 80px;
-                    font-weight: 900;
-                    line-height: 1.10;
-                    margin-bottom: 35px;
-                    font-family: Montserrat, sans-serif;
-
-                    .banner-title-color {
-                        color: #eb5757;
-                    }
+                .banner-title-color {
+                    color: #eb5757;
                 }
+            }
 
-                .banner-paragraph {
-                    font-size: 36px;
-                    font-weight: 400;
-                    margin-bottom: 30px;
-                }
+            .small {
+                color: #fff;
+                font-size: 30px;
+                font-weight: 500;
+                padding-top: 10px;
+            }
 
-                .banner-button {
-                    display: inline-block;
-                    background-color: #eb5757;
-                    justify-self: center;
-                    color: #fff;
-                    text-decoration: none;
-                    padding: 13px 30px;
-                    border-radius: 32px;
-                    transition: box-shadow 500ms;
-                    font-size: 20px;
-                    font-weight: 700;
-                    margin-bottom: 4%;
+            .banner-button {
+                background-color: #eb5757;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 25px;
+                border-radius: 32px;
+                transition: box-shadow 500ms;
+                font-size: 20px;
+                font-weight: 700;
+                margin-top: 45px;
 
-                    &:hover {
-                        box-shadow: 1px 1px 30px -5px #20202085;
-                    }
+                &:hover {
+                    background-color: #fe4794;
+                    box-shadow: 1px 1px 30px -5px #20202085;
                 }
             }
         }
@@ -232,12 +227,10 @@
     .fade-in .banner .banner-text .container .banner-title {
         font-size: 30px;
         margin-bottom: 22px;
-        text-align: left;
     }
 
     .fade-in .banner .banner-text .container .banner-paragraph {
         font-size: 20px;
-        text-align: left;
     }
 
     .fade-in .banner .banner-text .container .banner-button {
@@ -250,9 +243,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .fade-in .banner .banner-text {
-        text-align: left;
-    }
 
     .fade-in .portada-uno .container .portada-uno-flex {
         display: flex;
@@ -273,9 +263,6 @@
         text-align: left;
     }
 
-    .fade-in .portada-uno .portada-uno__paragraph {
-        text-align: left;
-    }
 
     .fade-in .portada-uno .container .portada-uno-flex .pt-4 .subtitle-portada-uno::before {
         position: unset;
@@ -319,7 +306,4 @@
         font-size: 14px;
     }
 
-    .fade-in .banner .banner-text {
-        text-align: left;
-    }
 }

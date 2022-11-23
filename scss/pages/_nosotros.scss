@@ -452,8 +452,8 @@
                             }
 
                             p {
-                                font-size: 16px;
-                                line-height: 20px;
+                                font-size: 17px;
+                                line-height: 1.6;
                                 margin-bottom: 120px;
                             }
                         }
@@ -645,7 +645,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-align: center;
+        text-align: left;
     }
 
     .caracteristicas .container .caracteristicas-flex .caracteristicas-main {
@@ -691,6 +691,12 @@
 @media screen and (max-width: 576px) {
     .main img {
         height: 60px;
+    }
+
+    .caracteristicas .container .caracteristicas-flex .caracteristicas-main #timeline .demo-card .body p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 120px;
     }
 
     .nosotros .container .nosotros-flex .nosotros-container .nosotros__paragraph {

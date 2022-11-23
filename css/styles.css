@@ -142,8 +142,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .container {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -719,7 +719,7 @@ body {
 }
 .fade-in .wave-banner {
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -2091,6 +2091,10 @@ footer .container__footer .box__footer a .fab {
   font-size: 19px;
   margin-right: 5px;
 }
+footer .container__footer .box__footer a .fa {
+  font-size: 19px;
+  margin-right: 5px;
+}
 footer .container__footer .pb-0 {
   padding-bottom: 0px;
 }
@@ -2114,41 +2118,41 @@ footer .box__copyright hr {
 }
 footer .scrolltop {
   color: white;
-  background: tomato;
-  padding: 20px;
-  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 20%;
   position: fixed;
-  left: 50px;
-  bottom: 30px;
+  left: 25px;
+  bottom: 20px;
   cursor: pointer;
   transition: 0.5s;
-  box-shadow: 2px 2px 3px #999;
+  box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.5215686275);
 }
 footer .scrolltop:hover {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-  background-color: #581792;
+  background-color: #3a1792;
   transition: 0.5s;
 }
 footer .float-whatsapp {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 30px;
-  right: 50px;
+  bottom: 20px;
+  right: 25px;
   background-color: #25d366;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
-  font-size: 39px;
+  font-size: 37px;
   padding-top: 9px;
   padding-left: 2px;
   z-index: 100;
   transition: 0.5s;
-  box-shadow: 2px 2px 3px #999;
+  box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.5215686275);
 }
 footer .float-whatsapp:hover {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-  background-color: #581792;
+  background-color: #3a1792;
   transition: 0.5s;
 }
 

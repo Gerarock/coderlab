@@ -55,6 +55,11 @@ footer {
                 font-size: 19px;
                 margin-right: 5px;
             }
+
+            & a .fa {
+                font-size: 19px;
+                margin-right: 5px;
+            }
         }
 
         .pb-0 {
@@ -86,19 +91,19 @@ footer {
 
     .scrolltop {
         color: white;
-        background: tomato;
-        padding: 20px;
-        border-radius: 50%;
+        background: rgb(0 0 0 / 60%);
+        padding: 15px;
+        border-radius: 20%;
         position: fixed;
-        left: 50px;
-        bottom: 30px;
+        left: 25px;
+        bottom: 20px;
         cursor: pointer;
         transition: 0.5s;
-        box-shadow: 2px 2px 3px #999;
+        box-shadow: 1px 1px 30px -5px #20202085;
 
         &:hover {
             box-shadow: 0 15px 45px rgb(0 0 0 / 10%);
-            background-color: #581792;
+            background-color: #3a1792;
             transition: 0.5s;
         }
     }
@@ -107,22 +112,22 @@ footer {
         position: fixed;
         width: 60px;
         height: 60px;
-        bottom: 30px;
-        right: 50px;
+        bottom: 20px;
+        right: 25px;
         background-color: #25d366;
         color: #FFF;
         border-radius: 50px;
         text-align: center;
-        font-size: 39px;
+        font-size: 37px;
         padding-top: 9px;
         padding-left: 2px;
         z-index: 100;
         transition: 0.5s;
-        box-shadow: 2px 2px 3px #999;
+        box-shadow: 1px 1px 30px -5px #20202085;
 
         &:hover {
             box-shadow: 0 15px 45px rgb(0 0 0 / 10%);
-            background-color: #581792;
+            background-color: #3a1792;
             transition: 0.5s;
         }
     }

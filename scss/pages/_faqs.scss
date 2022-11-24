@@ -307,3 +307,17 @@
         margin-right: 4px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta.activa .respuesta {
+        width: 19em;
+    }
+
+    .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta.activa .respuesta {
+        margin-left: 0;
+    }
+
+    .preguntas-frecuentes .container .preguntas .contenedor-preguntas .contenedor-pregunta .respuesta {
+        line-height: 24px;
+    }
+}

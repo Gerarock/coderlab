@@ -663,3 +663,15 @@
         animation: logoMove 10s linear infinite;
     }
 }
+
+@media (max-width: 375px) {
+    .fade-in .servicios .container {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

@@ -592,7 +592,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 .fade-in .banner .text-flex .text {
   font-size: 45px;
@@ -811,10 +810,10 @@ body {
     background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
     background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
   }
-  .fade-in .arrow {
-    background: #d25564;
-    height: 50px;
-  }
+  /*     .fade-in .arrow {
+          background: #d25564;
+          height: 50px;
+      } */
   .fade-in .portada-dos .container .portada-dos-flex .portada-dos__main {
     display: flex;
     flex-direction: column;

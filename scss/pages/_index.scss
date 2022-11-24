@@ -29,7 +29,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+           // min-height: 100vh;
 
             .text {
                 font-size: 45px;
@@ -307,10 +307,10 @@
         background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
     }
 
-    .fade-in .arrow {
+/*     .fade-in .arrow {
         background: #d25564;
         height: 50px;
-    }
+    } */
 
     .fade-in .portada-dos .container .portada-dos-flex .portada-dos__main {
         display: flex;

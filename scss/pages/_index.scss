@@ -16,8 +16,7 @@
 
     .banner {
         width: 100%;
-        min-height: 900px;
-        max-height: 100px;
+        height: 100vh;
         background: -webkit-linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
         background: linear-gradient(hsl(276, 92%, 26%, 1), hsl(350, 81%, 42%, 0.759)), url(../img/background-page.svg);
 
@@ -30,7 +29,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100vw;
             min-height: 100vh;
 
             .text {
@@ -49,7 +47,7 @@
                 color: #fff;
                 font-size: 30px;
                 font-weight: 500;
-                padding-top: 10px;
+                padding-top: 20px;
             }
 
             .banner-button {
@@ -224,6 +222,12 @@
 
 /* MEDIA QUERYS INDEX */
 @media screen and (max-width: 992px) {
+    .fade-in .banner .text-flex {
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: center;
+    }
+
     .fade-in .banner .banner-text .container .banner-title {
         font-size: 30px;
         margin-bottom: 22px;
@@ -243,6 +247,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    .fade-in .banner .text-flex {
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+    }
 
     .fade-in .portada-uno .container .portada-uno-flex {
         display: flex;
@@ -279,6 +288,20 @@
 }
 
 @media screen and (max-width: 576px) {
+    .fade-in .banner .text-flex {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
+
+    .fade-in .banner .text-flex .text {
+        font-size: 35px;
+    }
+
+    .fade-in .banner .text-flex .small {
+        font-size: 25px;
+    }
+
     .fade-in .banner {
         background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
         background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));

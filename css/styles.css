@@ -580,7 +580,7 @@ body {
 }
 .fade-in .banner {
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
   background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
 }
@@ -627,7 +627,7 @@ body {
 }
 .fade-in .wave-banner {
   position: absolute;
-  bottom: -10vh;
+  bottom: 0vh;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -796,6 +796,9 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
+  .fade-in .wave-banner {
+    visibility: hidden;
+  }
   .fade-in .banner .text-flex {
     padding-left: 30px;
     padding-right: 30px;

@@ -580,7 +580,7 @@ body {
 }
 .fade-in .banner {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
   background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
 }
@@ -627,7 +627,7 @@ body {
 }
 .fade-in .wave-banner {
   position: absolute;
-  bottom: 0;
+  bottom: -10vh;
   left: 0;
   width: 100%;
   overflow: hidden;

@@ -123,7 +123,8 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #54595f;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .container {
@@ -334,7 +335,7 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover; */
-  background-color: #653694;
+  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
 }
 .fade-in .banner-faqs .arrow-banner-down {
   position: absolute;
@@ -577,6 +578,16 @@ body {
       background: #cc283b;
       height: 50px;
   } */
+  /*     .wave-banner {
+      position: absolute;
+      bottom: 0vh;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+  } */
+  /* wave banner animado */
   /* SECCION PORTADA UNO INDEX */
   /* SECCION PORTADA DOS INDEX */
   /* SECCION PORTADA TRES INDEX */
@@ -593,8 +604,11 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
-  background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/background-page.svg);
+  background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/bg-coding.jpeg);
+  background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759)), url(../img/bg-coding.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .fade-in .banner .text-logo {
   color: #eb5757;
@@ -637,14 +651,73 @@ body {
   background-color: #fe4794;
   box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.5215686275);
 }
-.fade-in .wave-banner {
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.fade-in .waveWrapper {
+  overflow: hidden;
   position: absolute;
-  bottom: 0vh;
   left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.fade-in .waveWrapperInner {
+  position: absolute;
   width: 100%;
   overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+  height: 100%;
+  bottom: -1px;
+}
+.fade-in .bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.fade-in .bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.fade-in .bgBottom {
+  z-index: 5;
+}
+.fade-in .wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.fade-in .waveTop {
+  background-size: 50% 100px;
+}
+.fade-in .waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.fade-in .waveMiddle {
+  background-size: 50% 120px;
+}
+.fade-in .waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.fade-in .waveBottom {
+  background-size: 50% 100px;
+}
+.fade-in .waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
 }
 .fade-in .portada-uno {
   background-color: #fff;
@@ -686,7 +759,7 @@ body {
   top: -30px;
 }
 .fade-in .portada-uno .container .portada-uno-flex .pt-4 .portada-uno__paragraph {
-  line-height: 1.7;
+  line-height: 1.4;
 }
 .fade-in .portada-dos {
   background: #f7f7f8;
@@ -819,10 +892,6 @@ body {
   .fade-in .banner .text-flex .small {
     font-size: 25px;
   }
-  .fade-in .banner {
-    background: -webkit-linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
-    background: linear-gradient(hsl(276deg, 92%, 26%), hsla(350deg, 81%, 42%, 0.759));
-  }
   /*     .fade-in .arrow {
       background: #d25564;
       height: 50px;
@@ -903,6 +972,21 @@ body {
   font-size: 30px;
   font-weight: 500;
   padding-top: 20px;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  width: 59ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .fade-in .banner-nosotros .text-flex-nosotros .banner-nosotros-button {
   background-color: #eb5757;
@@ -1154,7 +1238,7 @@ body {
   .caracteristicas .container .caracteristicas-flex .caracteristicas-main #timeline .demo-card:nth-child(odd) .head::after {
     border-left-width: 15px;
     border-left-style: solid;
-    left: 100%;
+    left: 99%;
   }
   .caracteristicas .container .caracteristicas-flex .caracteristicas-main #timeline .demo-card:nth-child(odd) .head::before {
     left: 491.5px;
@@ -1165,7 +1249,7 @@ body {
   .caracteristicas .container .caracteristicas-flex .caracteristicas-main #timeline .demo-card:nth-child(even) .head::after {
     border-right-width: 15px;
     border-right-style: solid;
-    right: 100%;
+    right: 99%;
   }
   .caracteristicas .container .caracteristicas-flex .caracteristicas-main #timeline .demo-card:nth-child(even) .head::before {
     right: 489.5px;
@@ -1575,7 +1659,7 @@ body {
   color: #fff;
 }
 .fade-in .servicios-info .container .servicio-info-flex .content .paragraph-servicios-info {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
   margin-top: 1em;
   color: #fff;
@@ -1652,6 +1736,7 @@ body {
   font-weight: 400;
   margin: 20px;
   width: 80%;
+  text-align: center;
 }
 .fade-in .servicios-uno {
   background: #fff;
@@ -1701,13 +1786,15 @@ body {
 }
 .fade-in .servicios .container {
   overflow: unset;
-  padding-top: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 0;
 }
 .fade-in .servicios .container .servicios-flex {
+  background-image: url(../../img/rect.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: row;
 }
@@ -1719,16 +1806,17 @@ body {
 }
 .fade-in .servicios .container .servicios-flex aside .titulo {
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: #292b2f;
   text-align: right;
   margin-bottom: 0px;
   background: #fff;
-  padding: 10px 39px 10px 0px;
-  border-radius: 0 10px 10px 0;
+  padding: 6px 20px 6px 0;
+  border-radius: 0 14px 14px 0;
   border-color: gray;
   border-width: 1px 1px 1px 0;
   border-style: dotted;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
 }
 .fade-in .servicios .container .servicios-flex .contenido p {
   margin-bottom: 20px;
@@ -1796,6 +1884,7 @@ body {
   z-index: 2;
   color: #333;
   transition: 0.5s;
+  margin-bottom: 25px;
 }
 .fade-in .servicios .container .servicios-flex .box-flex .box .paragraph-box {
   position: relative;
@@ -2130,32 +2219,43 @@ footer .box__copyright hr {
   background-color: #fff;
 }
 footer .scrolltop {
-  color: white;
+  color: #afafaf;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px;
-  border-radius: 20%;
+  padding-bottom: 12px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   position: fixed;
   left: 25px;
-  bottom: 20px;
+  bottom: 0;
   cursor: pointer;
   transition: 0.5s;
 }
 footer .scrolltop:hover {
   box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.52);
+  color: #fff;
+  padding-bottom: 25px;
 }
 footer .float-whatsapp {
   position: fixed;
   bottom: 14px;
-  right: 30px;
+  right: 40px;
   z-index: 100;
   transition: 0.5s;
 }
 footer .float-whatsapp img {
-  width: 115%;
+  width: 125%;
+  box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.52);
+  transition: 0.5s;
+  border-radius: 30px;
 }
 footer .float-whatsapp img:hover {
   box-shadow: 1px 1px 30px -5px rgba(32, 32, 32, 0.52);
-  border-radius: 30px;
+  border-radius: 60px;
+  transition: 0.5s;
+  width: 145%;
 }
 
 /* NAV */
@@ -2229,7 +2329,7 @@ nav .select::after {
   background-color: transparent;
 }
 nav .contactenos {
-  background-color: #fe4794;
+  background-color: #ed3c57;
   color: white;
   padding: 12px 25px;
   font-size: 13px;

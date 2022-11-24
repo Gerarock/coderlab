@@ -90,34 +90,45 @@ footer {
     }
 
     .scrolltop {
-        color: white;
+        color: #afafaf;
         background: rgb(0 0 0 / 60%);
         padding: 15px;
-        border-radius: 20%;
+        padding-bottom: 12px;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         position: fixed;
         left: 25px;
-        bottom: 20px;
+        bottom: 0;
         cursor: pointer;
         transition: 0.5s;
 
         &:hover {
             box-shadow: 1px 1px 30px -5px rgb(32 32 32 / 52%);
+            color: #fff;
+            padding-bottom: 25px;
         }
     }
 
     .float-whatsapp {
         position: fixed;
         bottom: 14px;
-        right: 30px;
+        right: 40px;
         z-index: 100;
         transition: 0.5s;
 
         & img {
-            width: 115%;
+            width: 125%;
+            box-shadow: 1px 1px 30px -5px rgb(32 32 32 / 52%);
+            transition: 0.5s;
+            border-radius: 30px;
 
             &:hover {
                 box-shadow: 1px 1px 30px -5px rgb(32 32 32 / 52%);
-                border-radius: 30px;
+                border-radius: 60px;
+                transition: 0.5s;
+                width: 145%;
             }
         }
     }

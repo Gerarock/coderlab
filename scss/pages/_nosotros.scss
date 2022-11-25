@@ -154,6 +154,20 @@
                 .nosotros-title-uno {
                     font-weight: 600;
                     margin-bottom: 1em;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 20px;
+                        right: 40px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(../../img/quote.svg);
+                        background-size: cover;
+                        opacity:0.05;
+                        pointer-events: none;
+                        transition: 0.5s;
+                    }
                 }
 
                 .nosotros__paragraph {

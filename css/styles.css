@@ -1250,20 +1250,11 @@ body {
     box-shadow: 0px 0px 2px 8px #fff;
   }
 }
-.caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(1) {
-  order: 1;
-}
 .caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(2) {
   order: 4;
 }
-.caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(3) {
-  order: 2;
-}
 .caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(4) {
   order: 5;
-}
-.caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(5) {
-  order: 3;
 }
 .caracteristicas .container .caracteristicas-flex .caracteristicas-main .demo-card:nth-child(6) {
   order: 6;
@@ -1389,7 +1380,7 @@ body {
   float: left;
   margin: 15px;
   padding: 10px;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 35px;
   font-weight: 600;
   background: rgba(0, 0, 0, 0.17);
